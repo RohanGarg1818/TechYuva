@@ -79,7 +79,79 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Upcoming Events Section */}
+      {/* 3. Bento Grid: Snapshot & Quick Resources */}
+      <section className="w-full bg-surface py-10 md:py-20 border-t border-outline-variant">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          {/* College Snapshot */}
+          <div className="col-span-1 lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold font-heading text-on-surface mb-1.5">College Snapshot</h2>
+              <p className="text-xs sm:text-sm text-on-surface-variant mb-6 font-body-md">
+                A vibrant academic and technological ecosystem fostering student leadership.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-outline-variant pt-2">
+              <div className="text-center pt-3 sm:pt-0">
+                <div className="text-3xl sm:text-4xl font-bold font-heading text-primary mb-1">40+</div>
+                <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Active Clubs</div>
+              </div>
+              <div className="text-center pt-3 sm:pt-0">
+                <div className="text-3xl sm:text-4xl font-bold font-heading text-primary mb-1">120+</div>
+                <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Annual Events</div>
+              </div>
+              <div className="text-center pt-3 sm:pt-0">
+                <div className="text-3xl sm:text-4xl font-bold font-heading text-primary mb-1">15K+</div>
+                <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Students &amp; Alumni</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Resources */}
+          <div className="col-span-1 lg:col-span-4 bg-primary text-on-primary rounded-xl p-6 sm:p-8 shadow-sm flex flex-col">
+            <h2 className="text-xl font-bold font-heading mb-4">Quick Resources</h2>
+            <div className="grid grid-cols-2 gap-3 flex-grow">
+              <Link
+                href="/resources"
+                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
+              >
+                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
+                  account_circle
+                </span>
+                <span className="text-xs font-semibold">Student Portal</span>
+              </Link>
+              <Link
+                href="/resources"
+                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
+              >
+                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
+                  menu_book
+                </span>
+                <span className="text-xs font-semibold">Digital Library</span>
+              </Link>
+              <Link
+                href="/resources"
+                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
+              >
+                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
+                  calendar_month
+                </span>
+                <span className="text-xs font-semibold">Academic Cal</span>
+              </Link>
+              <Link
+                href="/resources"
+                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
+              >
+                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
+                  help_center
+                </span>
+                <span className="text-xs font-semibold">Helpdesk</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Upcoming Events Section */}
       <section className="w-full bg-surface-container-lowest py-10 md:py-20 border-t border-outline-variant">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-6 md:mb-10">
@@ -136,7 +208,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Updates & Notices Split Section */}
+      {/* 5. Updates & Notices Split Section */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         {/* Latest Updates */}
         <div className="col-span-1 lg:col-span-7">
@@ -223,78 +295,6 @@ export default function HomePage() {
             >
               Browse Notice Board
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Bento Grid: Snapshot & Quick Resources */}
-      <section className="w-full bg-surface py-10 md:py-20 border-t border-outline-variant">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-          {/* College Snapshot */}
-          <div className="col-span-1 lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold font-heading text-on-surface mb-1.5">College Snapshot</h2>
-              <p className="text-xs sm:text-sm text-on-surface-variant mb-6 font-body-md">
-                A vibrant academic and technological ecosystem fostering student leadership.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-outline-variant pt-2">
-              <div className="text-center pt-3 sm:pt-0">
-                <div className="text-3xl sm:text-4xl font-bold font-heading text-primary mb-1">40+</div>
-                <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Active Clubs</div>
-              </div>
-              <div className="text-center pt-3 sm:pt-0">
-                <div className="text-3xl sm:text-4xl font-bold font-heading text-primary mb-1">120+</div>
-                <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Annual Events</div>
-              </div>
-              <div className="text-center pt-3 sm:pt-0">
-                <div className="text-3xl sm:text-4xl font-bold font-heading text-primary mb-1">15K+</div>
-                <div className="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Students &amp; Alumni</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Quick Resources */}
-          <div className="col-span-1 lg:col-span-4 bg-primary text-on-primary rounded-xl p-6 sm:p-8 shadow-sm flex flex-col">
-            <h2 className="text-xl font-bold font-heading mb-4">Quick Resources</h2>
-            <div className="grid grid-cols-2 gap-3 flex-grow">
-              <Link
-                href="/resources"
-                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
-              >
-                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
-                  account_circle
-                </span>
-                <span className="text-xs font-semibold">Student Portal</span>
-              </Link>
-              <Link
-                href="/resources"
-                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
-              >
-                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
-                  menu_book
-                </span>
-                <span className="text-xs font-semibold">Digital Library</span>
-              </Link>
-              <Link
-                href="/resources"
-                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
-              >
-                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
-                  calendar_month
-                </span>
-                <span className="text-xs font-semibold">Academic Cal</span>
-              </Link>
-              <Link
-                href="/resources"
-                className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-3 flex flex-col items-center justify-center text-center transition-colors group"
-              >
-                <span className="material-symbols-outlined text-[24px] mb-1 group-hover:scale-110 transition-transform">
-                  help_center
-                </span>
-                <span className="text-xs font-semibold">Helpdesk</span>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

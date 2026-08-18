@@ -24,7 +24,7 @@ export default function AboutPage() {
 
           <div className="flex flex-wrap gap-4 pt-2">
             <Link
-              href="/events"
+              href="#campus-life"
               className="bg-primary text-on-primary px-8 py-3.5 rounded font-label-sm text-xs uppercase tracking-wider font-bold hover:bg-primary-container transition-colors shadow-sm"
             >
               Explore Campus Life
@@ -193,10 +193,10 @@ export default function AboutPage() {
               </div>
               <div className="md:w-[45%] md:pl-8">
                 <h4 className="font-body-lg text-lg font-bold text-on-background mb-1">
-                  NBA Tier-1 Accreditation
+                  NAAC A++ &amp; NBA Tier-1 Accreditation
                 </h4>
                 <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-                  Conferred with prestigious NBA accreditation for all undergraduate computing programs, affirming our commitment to global education standards.
+                  Awarded prestigious NAAC A++ grade accreditation along with NBA Tier-1 accreditation for undergraduate computing programs, affirming our commitment to global education standards.
                 </p>
               </div>
             </div>
@@ -223,11 +223,11 @@ export default function AboutPage() {
 
           {/* Milestone 3 */}
           <div className="relative pl-8 md:pl-0">
-            <div className="md:hidden absolute w-3.5 h-3.5 bg-outline rounded-full -left-[8px] top-1.5 border-2 border-surface" />
-            <div className="hidden md:block absolute w-3.5 h-3.5 bg-outline rounded-full left-1/2 -ml-[7px] top-1.5 border-2 border-surface z-10" />
+            <div className="md:hidden absolute w-3.5 h-3.5 bg-primary rounded-full -left-[8px] top-1.5 border-2 border-surface" />
+            <div className="hidden md:block absolute w-3.5 h-3.5 bg-primary rounded-full left-1/2 -ml-[7px] top-1.5 border-2 border-surface z-10" />
             <div className="md:flex md:justify-between md:items-start w-full">
               <div className="md:w-[45%] md:text-right md:pr-8 mb-1 md:mb-0">
-                <span className="font-h3 text-2xl text-outline font-bold">1999</span>
+                <span className="font-h3 text-2xl text-primary font-bold">1999</span>
               </div>
               <div className="md:w-[45%] md:pl-8">
                 <h4 className="font-body-lg text-lg font-bold text-on-background mb-1">
