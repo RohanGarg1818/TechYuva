@@ -3,6 +3,9 @@ import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { BottomNav } from '@/components/layout/BottomNav';
+import { SmoothScroll } from '@/components/layout/SmoothScroll';
+import { Preloader } from '@/components/ui/Preloader';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'TECHYUVA — Digital Campus of USICT',
@@ -15,12 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light scroll-smooth">
-      <body className="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow pb-16 md:pb-0">{children}</main>
-        <Footer />
-        <BottomNav />
+    <html lang="en" className="light scroll-smooth" suppressHydrationWarning>
+      <body className="bg-background text-foreground font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+        <ThemeProvider>
+          <Preloader />
+          <SmoothScroll>
+            <Navbar />
+            <main className="flex-grow pb-16 md:pb-0">{children}</main>
+            <Footer />
+            <BottomNav />
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );
