@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TECHYUVA - Resources</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5f",
+                        "primary": "#3525cd",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-secondary-container": "#636263",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e3",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#4d44e3",
+                        "tertiary-container": "#a44100",
+                        "on-surface": "#191c1d",
+                        "secondary-container": "#e2dfe0",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary": "#7e3000",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#c7c4d8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffd2be",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["13px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h1": ["36px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-hero-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="font-h1 text-h1 font-bold text-primary">TECHYUVA</div>
+<nav class="hidden md:flex gap-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Events</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Announcements</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Notices</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Clubs</a>
+<a class="text-primary font-bold border-b-2 border-primary opacity-80 transition-all" href="#">About</a> <!-- Active state logically mapped to About/Resources intent -->
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-2 rounded-DEFAULT hover:opacity-90 transition-opacity">Explore Events</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center w-full">
+<!-- Hero Section -->
+<section class="w-full max-w-container-max mx-auto px-margin-desktop py-[100px] flex flex-col items-start gap-base">
+<h1 class="font-display-hero text-display-hero text-on-surface">Resources</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[720px]">Quick access to student and faculty portals, essential forms, and campus directories.</p>
+</section>
+<!-- Categories and Grid -->
+<section class="w-full max-w-container-max mx-auto px-margin-desktop pb-[120px] flex gap-gutter items-start">
+<!-- Sidebar Categories (Desktop) -->
+<aside class="w-64 hidden lg:flex flex-col gap-2 shrink-0 sticky top-32">
+<h3 class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-2">Categories</h3>
+<button class="text-left px-4 py-3 bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded-DEFAULT border-l-4 border-primary transition-colors">Academic</button>
+<button class="text-left px-4 py-3 text-on-surface-variant font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container hover:text-on-surface transition-colors">Student Services</button>
+<button class="text-left px-4 py-3 text-on-surface-variant font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container hover:text-on-surface transition-colors">Library</button>
+<button class="text-left px-4 py-3 text-on-surface-variant font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container hover:text-on-surface transition-colors">Admissions</button>
+<button class="text-left px-4 py-3 text-on-surface-variant font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container hover:text-on-surface transition-colors">Scholarships</button>
+</aside>
+<!-- Resources Grid -->
+<div class="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<a class="group bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 relative overflow-hidden" href="#">
+<div class="absolute inset-0 bg-primary/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
+<div class="h-12 w-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary relative z-10">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div class="relative z-10 flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Student Portal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Access grades, schedules, and personalized academic information.</p>
+</div>
+<div class="mt-auto relative z-10 pt-4 flex items-center text-primary font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Access Portal <span class="material-symbols-outlined text-[16px] ml-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Card 2 -->
+<a class="group bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 relative overflow-hidden" href="#">
+<div class="absolute inset-0 bg-primary/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
+<div class="h-12 w-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary relative z-10">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div class="relative z-10 flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Academic Portal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Faculty resources, course management, and departmental tools.</p>
+</div>
+<div class="mt-auto relative z-10 pt-4 flex items-center text-primary font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Access Portal <span class="material-symbols-outlined text-[16px] ml-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Card 3 -->
+<a class="group bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 relative overflow-hidden" href="#">
+<div class="absolute inset-0 bg-primary/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
+<div class="h-12 w-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary relative z-10">
+<span class="material-symbols-outlined" data-icon="edit_document">edit_document</span>
+</div>
+<div class="relative z-10 flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Examination</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exam schedules, past papers, and result declarations.</p>
+</div>
+<div class="mt-auto relative z-10 pt-4 flex items-center text-primary font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        View Details <span class="material-symbols-outlined text-[16px] ml-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Card 4 -->
+<a class="group bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 relative overflow-hidden" href="#">
+<div class="absolute inset-0 bg-primary/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
+<div class="h-12 w-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary relative z-10">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+</div>
+<div class="relative z-10 flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Library</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Digital catalogs, research journals, and booking study spaces.</p>
+</div>
+<div class="mt-auto relative z-10 pt-4 flex items-center text-primary font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Search Catalog <span class="material-symbols-outlined text-[16px] ml-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Card 5 -->
+<a class="group bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 relative overflow-hidden" href="#">
+<div class="absolute inset-0 bg-primary/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
+<div class="h-12 w-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary relative z-10">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div class="relative z-10 flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Important Forms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Downloadable PDFs for registration, clearance, and requests.</p>
+</div>
+<div class="mt-auto relative z-10 pt-4 flex items-center text-primary font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        View Forms <span class="material-symbols-outlined text-[16px] ml-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Card 6 -->
+<a class="group bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 relative overflow-hidden" href="#">
+<div class="absolute inset-0 bg-primary/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
+<div class="h-12 w-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary relative z-10">
+<span class="material-symbols-outlined" data-icon="contacts">contacts</span>
+</div>
+<div class="relative z-10 flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Contact Directory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Searchable database of faculty, staff, and department heads.</p>
+</div>
+<div class="mt-auto relative z-10 pt-4 flex items-center text-primary font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Find Contacts <span class="material-symbols-outlined text-[16px] ml-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-h2 text-h2 font-bold text-primary">TECHYUVA</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 TECHYUVA USICT. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Platform</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Resources</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Institution</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

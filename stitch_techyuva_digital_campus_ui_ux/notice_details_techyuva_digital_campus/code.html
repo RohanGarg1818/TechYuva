@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TECHYUVA - Notice Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5f",
+                        "primary": "#3525cd",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-secondary-container": "#636263",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e3",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#4d44e3",
+                        "tertiary-container": "#a44100",
+                        "on-surface": "#191c1d",
+                        "secondary-container": "#e2dfe0",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary": "#7e3000",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#c7c4d8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffd2be",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["13px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h1": ["36px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-hero-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-gutter">
+<a class="font-h1 text-h1 font-bold text-primary dark:text-inverse-primary" href="#">TECHYUVA</a>
+<div class="hidden md:flex items-center gap-6 ml-8">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Events</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Announcements</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Notices</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Clubs</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-body-md text-body-md w-64 text-on-surface placeholder:text-outline" placeholder="Search notices..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-sm text-label-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all">Explore Events</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-12 pb-24 px-margin-desktop max-w-container-max mx-auto w-full flex flex-col lg:flex-row gap-gutter">
+<!-- Left Column: Notice Details -->
+<div class="flex-grow lg:w-8/12 xl:w-9/12 max-w-[800px]">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-sm text-label-sm mb-8">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a class="inline-flex items-center hover:text-primary transition-colors" href="#">Home</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Notices</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-on-surface">Notice Details</span>
+</div>
+</li>
+</ol>
+</nav>
+<!-- Notice Header -->
+<header class="mb-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-error text-on-error px-3 py-1 rounded font-label-sm text-label-sm tracking-wider uppercase">Very Important</span>
+<span class="text-on-surface-variant font-body-md text-body-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                        17 August 2026
+                    </span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface mb-4">End Semester Examination Schedule</h1>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[20px]">account_circle</span>
+                    Issued by: <span class="font-medium text-on-surface">Academic Administration</span>
+</div>
+</header>
+<!-- Notice Body -->
+<article class="font-body-lg text-body-lg text-on-surface-variant space-y-6 mb-12">
+<p>This is to inform all students enrolled in undergraduate and postgraduate programs that the End Semester Examinations for the academic session 2025-2026 will commence starting from the 1st of September 2026. The detailed schedule outlining specific dates, timings, and venues for respective courses has been finalized and is attached to this notice.</p>
+<p>Students are strongly advised to carefully review the timetable to ensure they are aware of their examination dates. Any discrepancies or clashes in the schedule must be reported immediately to the Academic Administration office via email or in person no later than the 22nd of August 2026. Requests for schedule adjustments after this deadline will not be entertained.</p>
+<div class="bg-surface-container-low p-6 rounded border border-outline-variant my-8">
+<h3 class="font-h3 text-h3 text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                        Important Instructions
+                    </h3>
+<ul class="list-disc list-inside space-y-2 font-body-md text-body-md ml-2">
+<li>Valid institutional ID cards are mandatory for entry into the examination hall.</li>
+<li>Students must report to the examination venue at least 30 minutes prior to the scheduled start time.</li>
+<li>Electronic devices, including mobile phones and smartwatches, are strictly prohibited inside the examination halls.</li>
+<li>Seating arrangements will be displayed on the notice boards of the respective blocks one day prior to the exams.</li>
+</ul>
+</div>
+<p>Admit cards will be available for download from the student portal starting August 25th. Ensure all fee dues are cleared before attempting to download the admit card. We wish all students the very best for their upcoming examinations.</p>
+</article>
+<!-- Attachments -->
+<section class="border-t border-outline-variant pt-8">
+<h2 class="font-h3 text-h3 text-on-surface mb-6">Attachments</h2>
+<div class="flex flex-col sm:flex-row gap-4">
+<!-- Attachment Card -->
+<div class="bg-surface border border-outline-variant p-4 rounded flex items-center justify-between hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all flex-grow max-w-[400px]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-error-container text-on-error-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-surface truncate w-40 sm:w-48">Examination_Schedule.pdf</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">2.4 MB • PDF Document</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="View Document" class="p-2 text-primary hover:bg-primary-container hover:text-on-primary-container rounded transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+<button aria-label="Download Document" class="p-2 text-primary hover:bg-primary-container hover:text-on-primary-container rounded transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar (Related Notices) -->
+<aside class="lg:w-4/12 xl:w-3/12 mt-12 lg:mt-0">
+<div class="bg-surface border border-outline-variant rounded p-6 sticky top-28">
+<h3 class="font-h3 text-h3 text-on-surface mb-6 pb-4 border-b border-outline-variant">Related Notices</h3>
+<div class="space-y-6">
+<!-- Related Notice Item -->
+<a class="block group" href="#">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-label-sm text-[10px] uppercase">Normal</span>
+<span class="text-on-surface-variant font-body-md text-[12px]">15 Aug 2026</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">Clearance of Semester Fee Dues Before Examinations</h4>
+</a>
+<!-- Related Notice Item -->
+<a class="block group" href="#">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded font-label-sm text-[10px] uppercase">Important</span>
+<span class="text-on-surface-variant font-body-md text-[12px]">10 Aug 2026</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">Guidelines for Practical Examinations and Viva-Voce</h4>
+</a>
+<!-- Related Notice Item -->
+<a class="block group" href="#">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-label-sm text-[10px] uppercase">Normal</span>
+<span class="text-on-surface-variant font-body-md text-[12px]">05 Aug 2026</span>
+</div>
+<h4 class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">Availability of Admit Cards on Student Portal</h4>
+</a>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-center">
+<a class="text-primary font-label-sm text-label-sm hover:underline flex items-center justify-center gap-1" href="#">
+                        View All Notices
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline full-width mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<span class="font-h2 text-h2 font-bold text-primary dark:text-inverse-primary">TECHYUVA</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">Empowering the technical community of USICT.</p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface">Platform</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Events</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Clubs</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface">Resources</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Notices</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Announcements</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface">Institution</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">About UsICT</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Faculty</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface">Legal &amp; Contact</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/30 text-center font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                © 2024 TECHYUVA USICT. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

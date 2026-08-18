@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results - TECHYUVA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5f",
+                        "primary": "#3525cd",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-secondary-container": "#636263",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e3",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#4d44e3",
+                        "tertiary-container": "#a44100",
+                        "on-surface": "#191c1d",
+                        "secondary-container": "#e2dfe0",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary": "#7e3000",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#c7c4d8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffd2be",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["13px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h1": ["36px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-hero-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-gutter">
+<a class="font-h1 text-h1 font-bold text-primary dark:text-inverse-primary" href="#">TECHYUVA</a>
+<div class="hidden md:flex gap-6 ml-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Events</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Announcements</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Notices</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Clubs</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<!-- Search Input in Header -->
+<div class="relative hidden lg:block w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container pl-10 pr-4 py-2 border border-outline-variant rounded-full text-body-md font-body-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" type="text" value="hackathon"/>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-2.5 rounded-DEFAULT hover:opacity-90 transition-opacity">Explore Events</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow px-margin-desktop max-w-container-max mx-auto w-full py-[80px]">
+<!-- Search Header -->
+<div class="mb-12 border-b border-outline-variant pb-8">
+<h1 class="font-display-hero text-display-hero text-on-surface mb-4">Search Results</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Showing results for <span class="font-semibold text-primary">"hackathon"</span></p>
+<!-- Filter Pills -->
+<div class="flex gap-4 mt-8 overflow-x-auto pb-2">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-sm text-label-sm border border-primary">All Results (12)</button>
+<button class="px-4 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm border border-outline-variant hover:bg-surface-container-low transition-colors">Events (4)</button>
+<button class="px-4 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm border border-outline-variant hover:bg-surface-container-low transition-colors">Clubs (2)</button>
+<button class="px-4 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm border border-outline-variant hover:bg-surface-container-low transition-colors">Notices (3)</button>
+<button class="px-4 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm border border-outline-variant hover:bg-surface-container-low transition-colors">Announcements (3)</button>
+</div>
+</div>
+<!-- Results Grid - Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Column 1: Main Results (8 cols) -->
+<div class="md:col-span-8 flex flex-col gap-8">
+<!-- Events Section -->
+<section>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">event</span>
+<h2 class="font-h2 text-h2 text-on-surface">Events</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Event Card 1 -->
+<div class="bg-surface border border-outline-variant rounded-lg overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 group cursor-pointer flex flex-col h-full">
+<div class="h-48 relative overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern university campus hackathon scene with students collaborating around laptops in a bright, minimalist setting with cool blue and white tones, high tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh_Dyqr91zQRTgdutMFzFXUd64GvlQrsQO2wH_NCp7cP0pNOCcB8FH7wZ9vYfDhx27OmexTk387JNhPhi-rBpIpjdcdrdLt7_Rh44PLrikCAhxiRmwal9mj1nD1wLVWChqbOX6JuDfZDqryELiKVOC6mZ_gMujcYifjvNcx9j5-jaI7g6ILwvJXKacAapyks-Xwcmj6lt3WKthfeOLqe_8LZFpyihu0MMdqXBXkzlCOFd-VWMOYGjz"/>
+<div class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-sm">Featured</div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Campus Hackathon 2026</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">The annual 48-hour coding marathon. Build, innovate, and solve real-world campus problems.</p>
+<div class="mt-auto flex items-center justify-between border-t border-outline-variant pt-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="font-label-sm text-label-sm">Oct 15 - 17, 2026</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface border border-outline-variant rounded-lg overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 group cursor-pointer flex flex-col h-full">
+<div class="h-48 relative overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract digital art representing coding and hackathons, featuring glowing wireframe networks and binary code on a clean light mode background with subtle indigo accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeV9PYdo8G8VOjVAz06y2fQHr7easZhXtkVGROYYJhX1Sg9RPldgW9GVUR5R52mjFw8e8ANOuTgMsPJll-JUb3TytmCD4xm1PRARpeUXCA4zSLnV6Kyvzq-lXqc5VqlvO63cbyU641nB0ea9Sofwi2IVzd37zICOzftzB_aW87_K7N3fjkLD0Zm60if69j4rU_YWQsTaqGM77VqQsNvcVapqh2nXmqBMTVTPqcXCO2aTUzYtqyzB6J"/>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Mini-Hack: AI Solutions</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">A focused 12-hour sprint building AI-powered tools for student productivity.</p>
+<div class="mt-auto flex items-center justify-between border-t border-outline-variant pt-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="font-label-sm text-label-sm">Nov 02, 2026</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Announcements Section -->
+<section class="mt-8">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">campaign</span>
+<h2 class="font-h2 text-h2 text-on-surface">Announcements</h2>
+</div>
+<div class="flex flex-col border-t border-outline-variant">
+<!-- Announcement Item -->
+<a class="py-6 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-4 -mx-4 group" href="#">
+<div class="flex flex-col md:flex-row gap-4 items-start">
+<div class="w-32 flex-shrink-0 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Sep 28, 2026</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors mb-2">Innovation Week &amp; Hackathon Kickoff</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Join us for the opening ceremony of Innovation Week, culminating in the main Campus Hackathon event. Keynote speakers announced.</p>
+</div>
+</div>
+</a>
+<!-- Announcement Item -->
+<a class="py-6 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-4 -mx-4 group" href="#">
+<div class="flex flex-col md:flex-row gap-4 items-start">
+<div class="w-32 flex-shrink-0 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Sep 15, 2026</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors mb-2">Hackathon Theme Reveal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">This year's theme focuses on Sustainable Campus Infrastructure. Start forming your teams!</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+</div>
+<!-- Column 2: Side Results (4 cols) -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<!-- Notices Section (High Priority styling) -->
+<section>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-error">priority_high</span>
+<h2 class="font-h2 text-h2 text-on-surface">Urgent Notices</h2>
+</div>
+<div class="bg-error-container border border-error/20 rounded-lg p-6 relative overflow-hidden group hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all cursor-pointer">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="flex justify-between items-start mb-3">
+<span class="font-label-sm text-label-sm text-error bg-on-error px-2 py-1 rounded-sm uppercase tracking-wider text-[10px]">Action Required</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-error-container mb-2 group-hover:underline">Hackathon Registration Closes Soon</h3>
+<p class="font-body-md text-body-md text-on-error-container/80 mb-4">Final deadline for team registration is this Friday at midnight. No late entries accepted.</p>
+<div class="flex items-center text-error font-label-sm text-label-sm">
+                            Register Now <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- Clubs Section -->
+<section>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">groups</span>
+<h2 class="font-h2 text-h2 text-on-surface">Clubs</h2>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Club Card -->
+<div class="bg-surface border border-outline-variant rounded-lg p-4 flex items-center gap-4 hover:border-primary hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-h3 text-h3 text-on-surface text-[18px] group-hover:text-primary transition-colors">Coding Club</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Organizers of the main Hackathon.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Pagination or Load More (Optional but good UX) -->
+<div class="mt-16 flex justify-center">
+<button class="px-8 py-3 bg-transparent border border-outline-variant text-on-surface font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors">Load More Results</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline full-width mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-h2 text-h2 font-bold text-primary dark:text-inverse-primary mb-6">TECHYUVA</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">© 2024 TECHYUVA USICT. All rights reserved.</p>
+</div>
+<div class="md:col-span-3 flex flex-col md:flex-row gap-8 justify-end">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Platform</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Resources</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Institution</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

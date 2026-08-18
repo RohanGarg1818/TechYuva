@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>InfoX - The Coding Society | TECHYUVA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5f",
+                        "primary": "#3525cd",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-secondary-container": "#636263",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e3",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#4d44e3",
+                        "tertiary-container": "#a44100",
+                        "on-surface": "#191c1d",
+                        "secondary-container": "#e2dfe0",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary": "#7e3000",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#c7c4d8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffd2be",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "display-hero": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+                        "h2": ["28px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "label-sm": ["13px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "h1": ["36px", { lineHeight: "1.3", fontWeight: "700" }],
+                        "h3": ["22px", { lineHeight: "1.4", fontWeight: "600" }],
+                        "display-hero-mobile": ["40px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #f8f9fa;
+            color: #191c1d;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-item {
+            background: #ffffff;
+            border: 1px solid #c7c4d8;
+            border-radius: 0.5rem;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+        .bento-item:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface w-full top-0 z-50 sticky transition-all border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<a class="font-h1 text-h1 font-bold text-primary dark:text-inverse-primary hover:opacity-80 transition-opacity" href="#">TECHYUVA</a>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="h-full flex items-center text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Home</a>
+<a class="h-full flex items-center text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Events</a>
+<a class="h-full flex items-center text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Announcements</a>
+<a class="h-full flex items-center text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Notices</a>
+<a class="h-full flex items-center text-primary dark:text-inverse-primary font-bold border-b-2 border-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Clubs</a>
+<a class="h-full flex items-center text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button aria-label="Search" class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<a class="hidden md:inline-flex bg-primary text-on-primary px-6 py-3 rounded hover:bg-surface-tint transition-colors font-label-sm text-label-sm uppercase tracking-wider font-semibold items-center gap-2" href="#">
+                    Explore Events
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-desktop max-w-container-max mx-auto py-20 flex flex-col gap-[80px]">
+<!-- Club Header Hero (Asymmetric) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-4 flex justify-center lg:justify-start">
+<div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-surface-container-highest bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] relative flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A striking digital illustration of a sleek, modern, abstract coding logo. The logo features sharp, metallic indigo geometric shapes that resemble brackets and stylized data streams. It is set against a pristine, bright white background, illuminated by soft, high-key studio lighting. The overall mood is technological, forward-thinking, and highly professional, reflecting a premium modern minimal aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4YLlcHL4U2gmzQ04mzywRcRD0BltorefCYvDaFa1RETde1Hvn04aWZSrGzoeQw8W_nLqBzC8UPk0Nlb3sXMcTeOnGmb31aEm4-3KJ83kJUrHun3w2ewQdHscqblqS3vnCdPC9-dI5O0J8q35C_TRDE9YtAJRFNEtg6E4jwmVvh2Q5pnkq6mScTqJOlV6zJq0AL5T8s4NZYNqBYI5J-nGcUMTBOPx5fJq76nn6uADND9pbE5GLxLG1"/>
+</div>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-6 text-center lg:text-left">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-center lg:justify-start gap-3 mb-2">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider font-bold">Technical</span>
+<span class="flex items-center gap-1 text-on-surface-variant text-sm font-medium">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">group</span>
+                            350+ Members
+                        </span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface">InfoX - The Coding Society</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto lg:mx-0 mt-2">Empowering USICT students through code, innovation, and collaborative problem-solving. We build the future, one line at a time.</p>
+</div>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start mt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded hover:bg-surface-tint transition-colors font-label-sm text-label-sm uppercase tracking-wider font-semibold">Join Club</button>
+<button class="bg-transparent text-primary border border-primary px-8 py-4 rounded hover:bg-primary-fixed transition-colors font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+                        Contact Us
+                    </button>
+<div class="flex items-center gap-3 ml-0 lg:ml-4 border-l-0 lg:border-l border-outline-variant pl-0 lg:pl-6">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined">link</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout for Content -->
+<section class="bento-grid">
+<!-- About Section (Large Tile) -->
+<div class="bento-item col-span-12 lg:col-span-8 flex flex-col gap-6">
+<div class="flex items-center gap-3 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary text-[28px]">info</span>
+<h2 class="font-h2 text-h2 text-on-surface">About Us</h2>
+</div>
+<div class="prose prose-lg text-on-surface-variant font-body-md max-w-none space-y-4">
+<p>InfoX is the premier technical society of USICT, dedicated to fostering a robust culture of competitive programming, software development, and technological exploration. Founded in 2018, we have grown into a vibrant community of over 350 active members who share a passion for creating elegant solutions to complex problems.</p>
+<p>Our mission is to bridge the gap between academic theory and industry practice. We achieve this through rigorous peer-to-peer learning, hands-on workshops, and large-scale hackathons. Whether you are a novice looking to write your first 'Hello World' or an experienced developer aiming to master advanced data structures, InfoX provides the resources, mentorship, and environment to help you excel.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+<div class="bg-surface-container-low p-4 rounded text-center border border-outline-variant">
+<div class="font-h2 text-primary font-bold">50+</div>
+<div class="text-sm text-on-surface-variant mt-1">Events Hosted</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center border border-outline-variant">
+<div class="font-h2 text-primary font-bold">3</div>
+<div class="text-sm text-on-surface-variant mt-1">Flagship Hackathons</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center border border-outline-variant">
+<div class="font-h2 text-primary font-bold">12</div>
+<div class="text-sm text-on-surface-variant mt-1">Active Projects</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center border border-outline-variant">
+<div class="font-h2 text-primary font-bold">20+</div>
+<div class="text-sm text-on-surface-variant mt-1">Industry Mentors</div>
+</div>
+</div>
+</div>
+<!-- Leadership / Core Team (Small Tile) -->
+<div class="bento-item col-span-12 lg:col-span-4 flex flex-col gap-6 bg-surface-container-lowest">
+<div class="flex items-center gap-3 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary text-[28px]">shield_person</span>
+<h2 class="font-h3 text-h3 text-on-surface">Leadership</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 p-3 rounded hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-primary-fixed overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean, professional studio portrait of a young male university student, confident and smiling. He is wearing a minimalist dark navy sweater against a pure, brightly lit white backdrop. The lighting is high-key and flattering, emphasizing a modern, tech-forward, and approachable academic profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMfC5hos1LOXJg12AAaRDLlBNVS7Tt0WlwrR5YOQHwaItXwY1EuPqZ6n0caUu_HWrn_B0tu7M56fAjuAwGQ0lV95r9JymeJ8Ge6AWOwwmM5duqEVCnAsbZ2gVlfp9HKK8VwRTm0xqEcYSE93qEnK1nAy2KVp5pi9WekkKItnBmecQ0l6RgynSFfaGGEZnbjOCu_JP5X3EewSnyfgzV2FGWrsOrkp3YXfKYyzFN5a3BSdn5_gltY9hh"/>
+</div>
+<div>
+<div class="font-h3 text-base text-on-surface">Rahul Sharma</div>
+<div class="text-sm text-on-surface-variant">President</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-primary-fixed overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A bright, modern studio portrait of a young female university student looking focused and professional. She wears a crisp white blouse with a subtle silver necklace. The background is a stark, clean white with soft, even studio lighting that highlights a sharp, premium corporate-academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZqUk0j18H4zsZsoPCU8vOay26p8ZyssdUtQ5-WAhhnnTbb0TGEFG5uKHJ9mm1dO5hIyLzNjSSqOjQ_wIVARzwFfC3VHC6NfG7aXNX9Z8hpYAAuwHdzapv1iCXptBdp5B0uDptkq9PsTayh1BeU2HihT4WTHxIij2THVJaCfX5dRvHhGPRk2F0Q7xDB5-3E2GdClzKwD0S6-7R1hBs6pJOP-ADypBgZEts2V0H05B1ZnQjl9W4JyEg"/>
+</div>
+<div>
+<div class="font-h3 text-base text-on-surface">Priya Patel</div>
+<div class="text-sm text-on-surface-variant">Technical Head</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-primary-fixed overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A sharp, minimalist portrait of a male university student with glasses, smiling subtly. He is dressed in a smart-casual light grey button-down shirt. The backdrop is pure white, illuminated by modern, high-key studio lighting that creates a clean, premium, and intelligent mood suitable for a tech club profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeapZhaVMCzhq2npUAOhToGK4tEJcEP4NCsiBlS5YCrXrFdGCD-7x8KWQbL78AmySvOhXleCK6AHrThHagdbNxxIrUwFx9ru01pdby8FspjvULWYF7K89Z8Duo4M0xLYJx89o-ysdev1xouTBFxpYbfDmasCgswgwHzfj2hnIOr0ah-z8WufQKd3fDtb0Ma67erVBy2kMOvoVHyRrkXqPwaPvToi0RVqaF4QcgoHK3J9VpxG5dotH-"/>
+</div>
+<div>
+<div class="font-h3 text-base text-on-surface">Amit Kumar</div>
+<div class="text-sm text-on-surface-variant">Events Coordinator</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Upcoming Events (Wide Tile) -->
+<div class="bento-item col-span-12 flex flex-col gap-6">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[28px]">event</span>
+<h2 class="font-h2 text-h2 text-on-surface">Upcoming Events</h2>
+</div>
+<a class="text-primary font-medium hover:underline flex items-center gap-1 text-sm" href="#">View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Event Card 1 -->
+<div class="group border border-outline-variant rounded flex flex-col sm:flex-row overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all bg-white">
+<div class="w-full sm:w-48 h-48 sm:h-auto flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, modern graphic design poster for a web development workshop. The image features clean, abstract representations of web browsers and code brackets floating in a minimal, bright workspace environment. The color palette is dominated by crisp whites, subtle grays, and striking indigo accents. High-key lighting ensures a premium, technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjNlc-k7jttye3P7qXwTz8N6VqyKEa4C1Yu8IursbL_FtVbGpv_idIFeaLLZNtR30vv5xnwd32FdkHaYeW6z0_5sIvq09DQl_q7e1ZHc8okJfzUB7idd32e1qmO3-B_RK7O5jnT7edcvqJeCwT6nSm1P8Y2yueMWge6tXGnAf-MG5fiA26YFULLMTX3yUCflt1ct2ux4Y8NtwOMX9bT7cjlxKYq0OLbrkzMmus3Yr6aGmT_8N2DwEU"/>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-1 rounded text-xs font-bold uppercase tracking-wider">Workshop</span>
+<span class="text-error font-semibold text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_fire_department</span> Filling Fast</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Advanced Web Dev Bootcamp</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Master modern frontend frameworks including React and Next.js in this intensive 2-day hands-on session.</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2 text-sm text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span> Oct 15, 2024
+                                </div>
+<button class="text-primary font-semibold hover:bg-primary-fixed px-3 py-1 rounded transition-colors text-sm">RSVP</button>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group border border-outline-variant rounded flex flex-col sm:flex-row overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all bg-white">
+<div class="w-full sm:w-48 h-48 sm:h-auto flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly stylized, minimalist promotional graphic for a coding competition titled 'CodeSprint'. The design incorporates glowing geometric neon lines forming abstract logic gates over a clean, bright white background. The composition is sharp, balanced, and uses a refined palette of white, silver, and deep indigo to convey a premium, high-tech mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDODb7-jeyg-IpHfAtrL_7IGPdrR8oUB0M6wyT-kOrif5WJz6eWbfsb6AOrypKl09F7exV2pGrhlCiMpcB7QwxdirUxVKMN6MVg__CHb61_8bL4LxyT_wK8kw3UCbe0mi9_lVACl-hfRBMiVeDazoCZqrf1yP97IF2OBW3v4kODtY4A2e1jMJc1021wVc_jP9uRpQjxBZKxhU9ByNrXR84SMMyqg7QF7l9MESbIVgPzHNFlBeAC1WEQ"/>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="bg-primary text-on-primary px-2 py-1 rounded text-xs font-bold uppercase tracking-wider">Flagship</span>
+<span class="text-primary font-semibold text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">star</span> Major Event</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">CodeSprint 2024</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Our annual 24-hour hackathon. Build innovative solutions for real-world campus problems and win exciting prizes.</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2 text-sm text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span> Nov 02, 2024
+                                </div>
+<button class="text-primary font-semibold hover:bg-primary-fixed px-3 py-1 rounded transition-colors text-sm">Register</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Past Activities Gallery (Masonry Style within Grid) -->
+<div class="bento-item col-span-12 flex flex-col gap-6">
+<div class="flex items-center gap-3 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary text-[28px]">photo_library</span>
+<h2 class="font-h2 text-h2 text-on-surface">Moments &amp; Achievements</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 row-span-2 relative rounded overflow-hidden group h-64 md:h-auto">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A vibrant, high-quality photograph capturing a large group of university students cheering enthusiastically inside a modern, brightly lit auditorium. They are holding up a large novelty check for a hackathon victory. The environment is sleek and contemporary, with ample natural light emphasizing a clean, positive, and high-energy academic achievement setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFUwR6ndRzSqB-OZDT64AVh7kOqLipVyDEoKGp1RxJJ0db2lTk6GVspBa3o4Er5KUUrrD8Ufc93dfjOUdDGyQs6yje8xOtqY1iY-u7p3wKvYi2arg2kQArmJQE-33JBiZP2s8lx80xSVIqIWCzq2ZBDKk4L55MqjEAW-Ddjto5VQd0y2CknqxCGfvlWr2MHfVjLDFh2hcvUVyGxbXsRAe4GwjYNr7PQqtpGsrPNPhRVd6T-By4T0vT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<span class="text-white font-h3 font-bold">Hackathon Winners 2023</span>
+</div>
+</div>
+<div class="relative rounded overflow-hidden group h-40 md:h-48">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A focused, modern close-up shot of two students collaborating intensely over a sleek laptop. The setting is a bright, minimalist university lab with white desks. High-key lighting highlights the concentration on their faces and the crisp, premium aesthetic of the technical workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcbhyrHxgonKx2o-vCBbcgxZOnGUD5wFQN9P1ahPwC2tORac3M269lDyIx-AayCnQqW5zcXvL1-SexrALsKy0737Z7YRtn1sgxWLJ0iEBacH5m0lGZUbzf8kOONPzwE0W5MBr1OrniPdp-cy6QjEtcALdmozxGRGYT7Nr_K-TlWeqifbtv5-jGmKykaXe8jbKvhWLJxNhB3nVWfOZ9wgBUc4ETLhCXkS8L1oLJ8ibePOMi3hj__2pn"/>
+</div>
+<div class="relative rounded overflow-hidden group h-40 md:h-48">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A wide, establishing shot of a large lecture hall filled with students listening to a tech speaker. The hall is modern, featuring light wood panels and bright white lighting. The perspective is from the back, showing a large presentation screen displaying clean, minimal code graphics, reinforcing a high-end educational environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBumkUZkAka7pylxixnwzfdW9x5yhJfmEzqs1p6rO0OGhOhSabq3UtfU8P1eyI47Lxr1UZ75b6rPUdnj9japP6ygd6VxLy2M6AmGjJTd4N6CFufhglornfc3WqJX9OYGxQgcLUdHIUEio-Z1RJnldyEB9_hkqKbJkGhBBhzkCYOdA8REKP4fj1XvOVtyBdDLd5vR4hnZeJS0353pELjqbFLVsJM5QM5TLKGRCp1b6ImELZuhuBWA7ac"/>
+</div>
+<div class="relative rounded overflow-hidden group h-40 md:h-48">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A detailed macro shot of a student's hands typing rapidly on a high-end mechanical keyboard. The desk is stark white, and the lighting is crisp and cool, creating a highly professional, modern, and minimal aesthetic typical of a premium tech workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFuY9KBYd18LeOlJxJl7aRFHzMwXmyS80hurDiG00G31wXJHe7tLlTGSqnsCxHgsJL2TO4qTeN24hNFTAsnJkHlRqSk-dAbzRkUt6pqSm75YZ4gQXExa8c5koRpVUtJdVmV24t1q4INIpLSYzmuqQg0Cdy6R41nU2M-aQNrdVCok5PjuSMb1dxd29uvjc0P4MxN1e93HnxVMvmnB-NpCh6xwbQGZ9_phf39wBA3laUBTe7kygcHP9b"/>
+</div>
+<div class="relative rounded overflow-hidden group h-40 md:h-48 bg-primary-container flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+<div class="text-center text-on-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px] mb-2">add_photo_alternate</span>
+<div class="font-medium text-sm">View Gallery</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface mt-20 w-full border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<a class="font-h2 text-h2 font-bold text-primary dark:text-inverse-primary" href="#">TECHYUVA</a>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-md text-sm">Empowering the USICT community through innovation and collaboration.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-h3 text-base text-on-surface dark:text-inverse-on-surface mb-2">Links</h4>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors font-body-md" href="#">Platform</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors font-body-md" href="#">Resources</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors font-body-md" href="#">Institution</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-h3 text-base text-on-surface dark:text-inverse-on-surface mb-2">Legal</h4>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors font-body-md" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-h3 text-base text-on-surface dark:text-inverse-on-surface mb-2">Connect</h4>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors font-body-md" href="#">Contact Us</a>
+<div class="flex gap-4 mt-2">
+<!-- Social placeholders -->
+<a class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a>
+<a class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/50 text-center text-on-surface-variant dark:text-surface-variant font-body-md text-sm">
+                © 2024 TECHYUVA USICT. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

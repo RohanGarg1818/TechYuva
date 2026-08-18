@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TECHYUVA Official Notices</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5f",
+                        "primary": "#3525cd",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-secondary-container": "#636263",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e3",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#4d44e3",
+                        "tertiary-container": "#a44100",
+                        "on-surface": "#191c1d",
+                        "secondary-container": "#e2dfe0",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary": "#7e3000",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#c7c4d8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffd2be",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["13px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h1": ["36px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-hero-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flat no shadows docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-gutter">
+<a class="font-h1 text-h1 font-bold text-primary dark:text-inverse-primary tracking-tight" href="#">TECHYUVA</a>
+<nav class="hidden md:flex gap-6 ml-8">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm h-20 flex items-center" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm h-20 flex items-center" href="#">Events</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm h-20 flex items-center" href="#">Announcements</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary font-label-sm text-label-sm h-20 flex items-center opacity-80 transition-all" href="#">Notices</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm h-20 flex items-center" href="#">Clubs</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm h-20 flex items-center" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-sm outline-none w-64" placeholder="Search notices..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-sm text-label-sm hover:bg-primary-container transition-colors duration-200">
+                    Explore Events
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-12 md:py-20 flex flex-col gap-12">
+<!-- Header Section -->
+<section class="flex flex-col gap-4 border-b border-outline-variant pb-8">
+<h1 class="font-display-hero text-display-hero text-on-surface">Official Notices</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Important updates and official information.</p>
+</section>
+<!-- Filters Section -->
+<section class="flex flex-col md:flex-row gap-4 items-center justify-between bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="flex flex-wrap gap-4 w-full md:w-auto">
+<div class="relative w-full md:w-48">
+<select class="w-full appearance-none bg-transparent border border-outline-variant rounded px-4 py-2.5 pr-10 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none font-body-md text-body-md text-on-surface bg-surface cursor-pointer">
+<option value="">All Priorities</option>
+<option value="very-important">Very Important</option>
+<option value="important">Important</option>
+<option value="normal">Normal</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="relative w-full md:w-48">
+<select class="w-full appearance-none bg-transparent border border-outline-variant rounded px-4 py-2.5 pr-10 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none font-body-md text-body-md text-on-surface bg-surface cursor-pointer">
+<option value="">All Departments</option>
+<option value="academic">Academic Affairs</option>
+<option value="admin">Administration</option>
+<option value="student">Student Life</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="relative w-full md:w-48">
+<input class="w-full appearance-none bg-transparent border border-outline-variant rounded px-4 py-2.5 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none font-body-md text-body-md text-on-surface bg-surface cursor-pointer" type="date"/>
+</div>
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto mt-4 md:mt-0">
+<button class="flex items-center justify-center gap-2 border border-outline-variant text-on-surface px-4 py-2 rounded hover:bg-surface-container-low transition-colors w-full md:w-auto">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+<span class="font-label-sm text-label-sm">More Filters</span>
+</button>
+</div>
+</section>
+<!-- Notices List -->
+<section class="flex flex-col">
+<div class="max-w-[720px] w-full mx-auto flex flex-col">
+<!-- Notice Item: Very Important -->
+<a class="group flex flex-col sm:flex-row gap-6 py-8 border-b border-outline-variant hover:bg-surface-container-low transition-colors duration-200 px-4 -mx-4 rounded" href="#">
+<div class="flex-shrink-0 w-32 flex flex-col gap-2 pt-1">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-error-container text-on-error-container font-label-sm text-[11px] uppercase tracking-wider font-bold w-fit">Very Important</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 24, 2024</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">Academic Affairs</span>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Examination Schedule for Fall Semester Released</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">The final examination schedule for all undergraduate and postgraduate programs has been published. Please review your specific dates and reporting times carefully.</p>
+</div>
+</a>
+<!-- Notice Item: Important -->
+<a class="group flex flex-col sm:flex-row gap-6 py-8 border-b border-outline-variant hover:bg-surface-container-low transition-colors duration-200 px-4 -mx-4 rounded" href="#">
+<div class="flex-shrink-0 w-32 flex flex-col gap-2 pt-1">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-primary-container/10 text-primary font-label-sm text-[11px] uppercase tracking-wider font-bold w-fit">Important</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 22, 2024</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">Administration</span>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Scholarship Application Deadline Extension</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">The deadline for the USICT Merit Scholarship applications has been extended by one week. Ensure all supporting documents are submitted via the portal.</p>
+</div>
+</a>
+<!-- Notice Item: Normal -->
+<a class="group flex flex-col sm:flex-row gap-6 py-8 border-b border-outline-variant hover:bg-surface-container-low transition-colors duration-200 px-4 -mx-4 rounded" href="#">
+<div class="flex-shrink-0 w-32 flex flex-col gap-2 pt-1">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-[11px] uppercase tracking-wider font-bold w-fit border border-outline-variant">Normal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 20, 2024</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">Student Life</span>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Photography Club Inaugural Meeting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Join us for the first meeting of the semester. We will be discussing upcoming photo walks, workshops, and the annual exhibition guidelines.</p>
+</div>
+</a>
+<!-- Notice Item: Normal -->
+<a class="group flex flex-col sm:flex-row gap-6 py-8 border-b border-outline-variant hover:bg-surface-container-low transition-colors duration-200 px-4 -mx-4 rounded" href="#">
+<div class="flex-shrink-0 w-32 flex flex-col gap-2 pt-1">
+<span class="inline-flex items-center justify-center px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-[11px] uppercase tracking-wider font-bold w-fit border border-outline-variant">Normal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 18, 2024</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">Facilities</span>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">Library Maintenance Closure Notice</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">The central library will be closed this weekend for scheduled IT infrastructure upgrades. Online databases will remain accessible.</p>
+</div>
+</a>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center gap-2">
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low disabled:opacity-50">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">1</button>
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low font-label-sm text-label-sm">2</button>
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low font-label-sm text-label-sm">3</button>
+<span class="text-on-surface-variant px-2">...</span>
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low font-label-sm text-label-sm">12</button>
+<button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline flat no shadows full-width mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-h2 text-h2 font-bold text-primary dark:text-inverse-primary">TECHYUVA</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">© 2024 TECHYUVA USICT. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Platform</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Resources</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Institution</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

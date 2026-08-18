@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TECHYUVA - Digital Campus of USICT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5f",
+                        "primary": "#3525cd",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-secondary-container": "#636263",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e3",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#4d44e3",
+                        "tertiary-container": "#a44100",
+                        "on-surface": "#191c1d",
+                        "secondary-container": "#e2dfe0",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary": "#7e3000",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#c7c4d8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffd2be",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h2": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["36px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "h3": ["22px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-hero-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand Logo -->
+<div class="font-h1 text-h1 font-bold text-primary flex items-center gap-2 tracking-tight">
+                TECHYUVA
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-label-sm text-label-sm font-bold border-b-2 border-primary pb-1 pt-1 opacity-80 transition-all" href="#">Home</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm font-medium hover:text-primary transition-colors duration-200 pb-1 pt-1" href="#">Events</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm font-medium hover:text-primary transition-colors duration-200 pb-1 pt-1" href="#">Announcements</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm font-medium hover:text-primary transition-colors duration-200 pb-1 pt-1" href="#">Notices</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm font-medium hover:text-primary transition-colors duration-200 pb-1 pt-1" href="#">Clubs</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm font-medium hover:text-primary transition-colors duration-200 pb-1 pt-1" href="#">About</a>
+</nav>
+<!-- Trailing Action -->
+<div class="hidden md:flex items-center gap-4">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200">
+                    Explore Events
+                </button>
+</div>
+</div>
+</header>
+<!-- Important Notice Banner -->
+<div class="w-full bg-error-container text-on-error-container py-3 px-margin-desktop border-b border-outline-variant">
+<div class="max-w-container-max mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="bg-error text-on-error font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase tracking-wider text-[10px]">Urgent</span>
+<span class="font-body-md text-body-md font-medium">End Semester Examination Schedule Released</span>
+</div>
+<div class="flex items-center gap-4 text-sm opacity-80">
+<span>17 Aug 2026</span>
+<span>Academic Administration</span>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="w-full">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-1 md:col-span-6 space-y-8 pr-0 md:pr-12">
+<div class="font-label-sm text-label-sm text-primary uppercase tracking-widest">
+                    TECHYUVA: Digital Campus of USICT
+                </div>
+<h1 class="font-display-hero text-display-hero text-on-surface">
+                    Everything happening on campus. <br/><span class="text-outline">In one place.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
+                    Access institutional resources, discover technical events, and stay updated with the latest academic announcements through a unified digital environment.
+                </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded hover:bg-primary-container transition-colors duration-200 shadow-sm">
+                        Explore Events
+                    </button>
+<button class="bg-transparent border border-outline-variant text-on-surface font-label-sm text-label-sm px-8 py-4 rounded hover:bg-surface-container-low transition-colors duration-200">
+                        Explore Notices
+                    </button>
+</div>
+</div>
+<div class="col-span-1 md:col-span-6 mt-12 md:mt-0 relative">
+<div class="aspect-[4/3] w-full rounded-xl overflow-hidden border border-outline-variant shadow-[0_4px_30px_rgba(0,0,0,0.06)] relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A striking, highly professional architectural photograph of a modern university campus building facade. Shot during golden hour with soft, warm sunlight casting long shadows across crisp geometric concrete lines. The scene is immaculate, minimalist, and conveys a premium, intelligent academic environment. High resolution, architectural digest style, emphasizing pristine white spaces and structural elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBurYuxlfVaBJ__-2_vTVeP6Gr69AFkuhuRzsvZt8HUkpJXstpMIHlobf1bF8S-_lmDM7UXaPqcGL4xnu_gT4pNA6S-XmUY4JcwCZKYmIN9FsBwmKFkFRSKdR0i27KMxB4QENF1Uac-0lThCOt8xO3Kz1egI3U4_uLDjq6pNWSgDXXtKjperOoCKqXbGFoMJka8mm2Z4kua05_mMbftM4hJzqNT03oPm732Ed858yuAFe0agVwpkUMZ"/>
+</div>
+</div>
+</section>
+<!-- What's Happening Next -->
+<section class="bg-surface-container-lowest py-24 border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface mb-2">What's Happening Next</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Upcoming events and major campus activities.</p>
+</div>
+<a class="text-primary font-label-sm text-label-sm flex items-center gap-1 hover:underline" href="#">
+                        View All Events <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Event Card 1 -->
+<div class="group bg-surface border border-outline-variant rounded-lg overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col">
+<div class="aspect-video w-full bg-surface-container-low relative overflow-hidden border-b border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A dynamic, high-quality photograph of students engaged in a robotics competition in a brightly lit, modern university laboratory. The scene captures intense focus and collaboration, with sleek metallic robotic parts on clean white tables. Lighting is high-key and crisp, reinforcing a cutting-edge technological atmosphere. Professional editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2bYBq9RE8caKYssZ1Nox6xoyBwtGMwjVrXBx9YZJxOOz_8VGI1YiqaVmECtPsRUxE_k9NULcY5CswypeD_3AAvB08TtASLeok4xE0yKL6vVi7rvXTJj2DkL0GQ3EFQaJT4ykJaBBq15cSwNiLz0A7Easx6Xt-beyLnplKRYqZrNOsBM8JGcyZJPbzPA83shHuzzU9FPVqWlo-RSPmyjbTF2BGv4tffI50Gtkn-qDRwDpHbZaG4Yqk"/>
+<div class="absolute top-4 left-4 bg-surface text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded shadow-sm border border-outline-variant">
+                                 12 Sep
+                             </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="font-label-sm text-label-sm text-primary mb-2">Technical</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-3 line-clamp-2 group-hover:text-primary transition-colors">Tech Fest 2026: Innovation Summit</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Join the largest technical gathering of the year featuring hackathons, workshops, and keynote speakers from top tech giants.</p>
+<div class="mt-auto flex items-center text-on-surface-variant font-label-sm text-label-sm gap-2 opacity-80">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Main Auditorium
+                            </div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group bg-surface border border-outline-variant rounded-lg overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col">
+<div class="aspect-video w-full bg-surface-container-low relative overflow-hidden border-b border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A vibrant, beautifully composed shot of a large university sports field under a clear blue sky. Students are actively participating in an athletic track event. The image features high contrast, saturated but realistic colors, and a shallow depth of field focusing on a runner in motion. The mood is energetic, healthy, and competitive within a modern campus setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgrND4aOxFz06t5sheRAIgIkkzrXVgP3ocKa5wNi8GLWuflACodeY7NRTFKPZt8URtr3cTz_N6StCQx5CR79J1yQ0hPZ2C5vLV01t_Ht36qr1Qrqr4UBARQaUdxXLkalNDEmXIBop0KEQvTLRptoadwFRIvv3mU5oqMyR0LAi6FVkptPNVk05L8wpoSjBqwqxonG4H9_p-2QjmdMuiVMVo7do4MDCsGjRiZas3rB7apF2Ef8Quz2Ck"/>
+<div class="absolute top-4 left-4 bg-surface text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded shadow-sm border border-outline-variant">
+                                 18 Sep
+                             </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="font-label-sm text-label-sm text-tertiary mb-2">Sports</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-3 line-clamp-2 group-hover:text-primary transition-colors">Annual Athletics Meet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Inter-departmental sports competition featuring track and field events, basketball finals, and more.</p>
+<div class="mt-auto flex items-center text-on-surface-variant font-label-sm text-label-sm gap-2 opacity-80">
+<span class="material-symbols-outlined text-[16px]">location_on</span> University Sports Complex
+                            </div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group bg-surface border border-outline-variant rounded-lg overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col">
+<div class="aspect-video w-full bg-surface-container-low relative overflow-hidden border-b border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated editorial photograph of an academic seminar taking place in a state-of-the-art campus auditorium. The lighting is focused and dramatic on a speaker presenting complex data on a large screen, while the audience is slightly in shadow, highlighting their attentive silhouettes. The setting is highly premium and intellectually stimulating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtHTGd5s2h2PgDwyCIRQWNzWg6UPFfCV_fsWZ7wEO-L970eihXTDnC7a7uvbYn1OFrq54y5X5bNqajgCjBR8C4IhOSue85y0LePCWM2kKw98XVm08r7ic9hT_43R6gX96B7gQDB-Y-mj0qK8785-nWCSi99p6-5sFwIcYcB3dzYN57cS0J6cbYd4jWaUGUKfC-zzI06eHvOTrAEhV63o-CfiOMXGytIrP0QLZGkmIc1QV2MQBjaxqZ"/>
+<div class="absolute top-4 left-4 bg-surface text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded shadow-sm border border-outline-variant">
+                                 22 Sep
+                             </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="font-label-sm text-label-sm text-primary mb-2">Academic</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-3 line-clamp-2 group-hover:text-primary transition-colors">Seminar on Generative AI Paradigms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Guest lecture by industry leaders discussing the future implications of AI in software engineering and design.</p>
+<div class="mt-auto flex items-center text-on-surface-variant font-label-sm text-label-sm gap-2 opacity-80">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Seminar Hall B
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Updates & Notices Split Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-24 grid grid-cols-1 md:grid-cols-12 gap-16">
+<!-- Latest Updates (Editorial List) -->
+<div class="col-span-1 md:col-span-7">
+<div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-4">
+<h2 class="font-h2 text-h2 text-on-surface">Latest Updates</h2>
+<a class="text-primary font-label-sm text-label-sm hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col">
+<a class="block border-b border-outline-variant py-6 hover:bg-[#F1F5F9] transition-colors group px-4 -mx-4 rounded" href="#">
+<div class="flex items-start gap-6">
+<div class="w-24 flex-shrink-0 pt-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant">24 Aug</div>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Registration Open for Localize Hackathon</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Form your teams of up to 4 members. The theme for this year focuses on solving hyper-local civic issues using open-source technologies.</p>
+</div>
+</div>
+</a>
+<a class="block border-b border-outline-variant py-6 hover:bg-[#F1F5F9] transition-colors group px-4 -mx-4 rounded" href="#">
+<div class="flex items-start gap-6">
+<div class="w-24 flex-shrink-0 pt-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant">22 Aug</div>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Library Extension Hours Announced</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">In preparation for the mid-term examinations, the central library will remain open until midnight starting next Monday.</p>
+</div>
+</div>
+</a>
+<a class="block border-b border-outline-variant py-6 hover:bg-[#F1F5F9] transition-colors group px-4 -mx-4 rounded" href="#">
+<div class="flex items-start gap-6">
+<div class="w-24 flex-shrink-0 pt-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant">20 Aug</div>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Call for Submissions: Annual Tech Magazine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Students and faculty are invited to submit research papers, technical articles, and project summaries for the upcoming issue.</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Official Notices -->
+<div class="col-span-1 md:col-span-5">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-h2 text-h2 text-on-surface">Official Notices</h2>
+<span class="material-symbols-outlined text-outline">campaign</span>
+</div>
+<div class="space-y-6">
+<!-- Notice Item 1 -->
+<div class="flex gap-4 items-start">
+<div class="mt-1">
+<span class="bg-error text-on-error font-label-sm text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider whitespace-nowrap">Very Important</span>
+</div>
+<div>
+<a class="font-body-md text-body-md font-medium text-on-surface hover:text-primary hover:underline line-clamp-2 mb-1" href="#">Mandatory Anti-Ragging Affidavit Submission</a>
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Dean of Students • 2 days ago</div>
+</div>
+</div>
+<!-- Notice Item 2 -->
+<div class="flex gap-4 items-start">
+<div class="mt-1">
+<span class="bg-surface-variant text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider whitespace-nowrap">Normal</span>
+</div>
+<div>
+<a class="font-body-md text-body-md font-medium text-on-surface hover:text-primary hover:underline line-clamp-2 mb-1" href="#">Fee Payment Deadline Extension for Semester 5</a>
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Accounts Office • 4 days ago</div>
+</div>
+</div>
+<!-- Notice Item 3 -->
+<div class="flex gap-4 items-start">
+<div class="mt-1">
+<span class="bg-surface-variant text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider whitespace-nowrap">Normal</span>
+</div>
+<div>
+<a class="font-body-md text-body-md font-medium text-on-surface hover:text-primary hover:underline line-clamp-2 mb-1" href="#">Schedule for Minor Project Evaluations (B.Tech CS)</a>
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Department of CSE • 1 week ago</div>
+</div>
+</div>
+<!-- Notice Item 4 -->
+<div class="flex gap-4 items-start">
+<div class="mt-1">
+<span class="bg-surface-variant text-on-surface-variant font-label-sm text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider whitespace-nowrap">Normal</span>
+</div>
+<div>
+<a class="font-body-md text-body-md font-medium text-on-surface hover:text-primary hover:underline line-clamp-2 mb-1" href="#">Holiday Notice for Independence Day</a>
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Registrar • 2 weeks ago</div>
+</div>
+</div>
+</div>
+<a class="mt-8 block text-center border border-outline-variant py-3 rounded font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+                        Browse Notice Board
+                    </a>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Snapshot & Resources -->
+<section class="bg-surface py-24 border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- College Snapshot -->
+<div class="col-span-1 md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-10 shadow-sm flex flex-col justify-between">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface mb-2">College Snapshot</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10">A vibrant ecosystem of learning and extracurricular excellence.</p>
+</div>
+<div class="grid grid-cols-3 gap-8 divide-x divide-outline-variant">
+<div class="text-center">
+<div class="font-display-hero text-display-hero text-primary mb-2">40+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Clubs</div>
+</div>
+<div class="text-center">
+<div class="font-display-hero text-display-hero text-primary mb-2">120+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Annual Events</div>
+</div>
+<div class="text-center">
+<div class="font-display-hero text-display-hero text-primary mb-2">15K+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Students</div>
+</div>
+</div>
+</div>
+<!-- Resources Quick Access -->
+<div class="col-span-1 md:col-span-4 bg-primary text-on-primary rounded-xl p-10 shadow-sm flex flex-col">
+<h2 class="font-h2 text-h2 mb-8">Quick Resources</h2>
+<div class="grid grid-cols-2 gap-4 flex-grow">
+<a class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-4 flex flex-col items-center justify-center text-center transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px] mb-2">account_circle</span>
+<span class="font-label-sm text-label-sm">Student Portal</span>
+</a>
+<a class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-4 flex flex-col items-center justify-center text-center transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px] mb-2">menu_book</span>
+<span class="font-label-sm text-label-sm">Digital Library</span>
+</a>
+<a class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-4 flex flex-col items-center justify-center text-center transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px] mb-2">calendar_month</span>
+<span class="font-label-sm text-label-sm">Academic Cal</span>
+</a>
+<a class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-4 flex flex-col items-center justify-center text-center transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px] mb-2">help_center</span>
+<span class="font-label-sm text-label-sm">Helpdesk</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-surface-container-low py-32 border-t border-outline-variant text-center px-margin-desktop">
+<div class="max-w-2xl mx-auto space-y-8">
+<h2 class="font-display-hero text-display-hero text-on-surface">Stay connected with campus.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Don't miss out on important updates, club activities, and academic deadlines. Access everything through the unified portal.</p>
+<div class="pt-4">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded hover:bg-primary-container transition-colors duration-200 shadow-sm">
+                        Access Dashboard
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-h2 text-h2 font-bold text-primary mb-4">TECHYUVA</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Digital Campus of USICT</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-sm text-label-sm text-on-surface mb-4 uppercase tracking-wider">Links</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Platform</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Resources</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Institution</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-sm text-label-sm text-on-surface mb-4 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-sm text-label-sm text-on-surface mb-4 uppercase tracking-wider">Support</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Help Center</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 TECHYUVA USICT. All rights reserved.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

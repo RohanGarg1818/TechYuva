@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TECHYUVA - Clubs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-error-container": "#93000a",
+                      "secondary": "#5f5e5f",
+                      "primary": "#3525cd",
+                      "surface-container-low": "#f3f4f5",
+                      "surface": "#f8f9fa",
+                      "on-primary-container": "#dad7ff",
+                      "on-secondary-fixed": "#1b1b1c",
+                      "inverse-primary": "#c3c0ff",
+                      "on-surface-variant": "#464555",
+                      "on-secondary-container": "#636263",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#e5e2e3",
+                      "inverse-surface": "#2e3132",
+                      "surface-tint": "#4d44e3",
+                      "tertiary-container": "#a44100",
+                      "on-surface": "#191c1d",
+                      "secondary-container": "#e2dfe0",
+                      "on-tertiary-fixed-variant": "#7b2f00",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "surface-container": "#edeeef",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed": "#0f0069",
+                      "tertiary": "#7e3000",
+                      "tertiary-fixed-dim": "#ffb695",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#f8f9fa",
+                      "on-secondary-fixed-variant": "#474647",
+                      "on-background": "#191c1d",
+                      "outline-variant": "#c7c4d8",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "tertiary-fixed": "#ffdbcc",
+                      "surface-dim": "#d9dadb",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-tertiary-container": "#ffd2be",
+                      "secondary-fixed-dim": "#c8c6c7",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-variant": "#e1e3e4",
+                      "background": "#f8f9fa",
+                      "outline": "#777587",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#4f46e5",
+                      "primary-fixed": "#e2dfff",
+                      "on-tertiary-fixed": "#351000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "display-hero": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "h2": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "h1": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "h3": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-hero-mobile": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "display-hero": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h2": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h1": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h3": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-hero-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-50 transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<a class="font-h1 text-h1 font-bold text-primary dark:text-inverse-primary hover:opacity-80 transition-opacity" href="#">
+                TECHYUVA
+            </a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm px-2 py-4" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm px-2 py-4" href="#">Events</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm px-2 py-4" href="#">Announcements</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm px-2 py-4" href="#">Notices</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm px-2 py-4 h-full flex items-center" href="#">Clubs</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 font-label-sm text-label-sm px-2 py-4" href="#">About</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-sm">
+                    Explore Events
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-12 md:py-20 flex flex-col gap-[80px]">
+<!-- Hero Section -->
+<section class="text-center max-w-3xl mx-auto flex flex-col gap-6">
+<h1 class="font-display-hero text-display-hero text-on-surface">Find your community.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Explore clubs, societies and student communities across USICT.</p>
+</section>
+<!-- Category Filters -->
+<section class="flex flex-wrap justify-center gap-4">
+<button class="px-6 py-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-transform hover:scale-105 animate-fade-in-up" style="animation-delay: 0.1s;">All Clubs</button>
+<button class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors animate-fade-in-up" style="animation-delay: 0.15s;">Technical</button>
+<button class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors animate-fade-in-up" style="animation-delay: 0.2s;">Cultural</button>
+<button class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors animate-fade-in-up" style="animation-delay: 0.25s;">Sports</button>
+<button class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors animate-fade-in-up" style="animation-delay: 0.3s;">Arts</button>
+<button class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors animate-fade-in-up" style="animation-delay: 0.35s;">Social</button>
+<button class="px-6 py-3 rounded-full bg-surface-container border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors animate-fade-in-up" style="animation-delay: 0.4s;">Entrepreneurship</button>
+</section>
+<!-- Featured Clubs Grid (Bento Style) -->
+<section class="flex flex-col gap-8">
+<h2 class="font-h2 text-h2 text-on-surface border-b border-outline-variant pb-4">Featured Communities</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Featured Card -->
+<a class="col-span-1 md:col-span-8 group relative rounded-xl overflow-hidden bg-surface border border-outline-variant transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] min-h-[400px] flex flex-col justify-end block animate-fade-in-up" href="{{DATA:SCREEN:SCREEN_7}}" style="animation-delay: 0.1s;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-quality, bright photograph showing a group of diverse university students collaborating excitedly around a glowing laptop screen in a modern, well-lit tech lab. The scene is illuminated by cool, crisp light reflecting the modern institutional aesthetic of USICT. The mood is highly energetic, innovative, and focused on cutting-edge technology. Subtle hints of deep blue and crisp white dominate the scene." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4qF1DhxpuIbIWihO1mTlyf8W3bp8nL7hFvMa6C-8fWDImz7s7GUYeA7ZSRNfSV6mAPPixQklGpUNLLn8dFTexklSw4gEUN-y0-AsZ91TSoPofmGZprs2lFhGeDNHgsC7WwIqPb76XjIs2-AmCS3J2SzyD_iyR_d_mypt6_7suN7PR7vTd1wS_lPDoYZ_fbQ06Rf24fLpMDRfOFupgB82SjPtwv64K8r8Dd2g8fCnlza4p6oK7eagt')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<div class="relative z-10 p-8 flex flex-col gap-4">
+<span class="self-start px-3 py-1 rounded bg-primary/90 text-on-primary font-label-sm text-label-sm backdrop-blur-sm">Technical</span>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A clean, minimalist abstract logo design for a technical coding club. The logo features sharp geometric shapes resembling code brackets interwoven with a sleek lightning bolt. Rendered in a strict palette of deep primary indigo and white, sitting perfectly centered on a light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLvETaUruuzE-p73rYwy3IpHuOdoNQkvCwQ9vkIZQ-gBEG3viRoprJ-L-UiD8D7sLw6MAuJujrQLqsywT6nDZpn7nceWYkcmh__IdYZDN314UlOkKiUbSJ3nAUYWs3be0aQdPqtS-0dYhlU5kjEizmEo9-S_EnKv2PrA2Fhbg_4--Ae_GS6m-iD1x2b51y1uyZatZglDA2_yxMrbNV4pvUVjhqlaeQNYqTysYDzCfzcImyK4-CBX1U"/>
+</div>
+<h3 class="font-h2 text-h2 text-white">InfoX - The Coding Society</h3>
+</div>
+<p class="font-body-md text-white/90 max-w-2xl">The premier programming community fostering a culture of algorithmic thinking and software development through rigorous hackathons and workshops.</p>
+<div class="mt-4 flex items-center gap-2 text-white/80 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="event">event</span>
+<span>Latest: CodeSprint 2024 (Registration Open)</span>
+</div>
+</div>
+</a>
+<!-- Smaller Featured Cards -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-gutter">
+<a class="flex-1 group relative rounded-xl overflow-hidden bg-surface border border-outline-variant transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] p-6 flex flex-col gap-4 justify-between block animate-fade-in-up" href="{{DATA:SCREEN:SCREEN_7}}" style="animation-delay: 0.2s;">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A vibrant, modern logo for a university cultural society. It features an abstract burst of colorful fluid shapes representing diverse arts, music, and dance. The design is clean, using bright energetic tones over a minimalist white background to fit an institutional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxBVX5_xrQRlhOyuWLaYHWR85WGrQxOKqtxKke2CNxwlA7Os_iDeE4P-KKCPXDULsXRx75zHY_sPWhcFnf_XoZ28O3j99GU6Rbqo8B-To81l5HGslAkwpLBrTlAFVfPged9IGck3zv_B1NzM5MW4g1F9V3K5zaQ1ZMcq3hXbvY3o3nNaH8Gx7dG6jvSIfAWN1tOQJP3BXxeEVqF3_dAJD_UhoKh7GZXp1dcSSX1kk566KoO2SuLPq"/>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[11px]">Cultural</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Srijan</h3>
+<p class="font-body-md text-on-surface-variant text-sm line-clamp-2">Celebrating diverse arts, music, and drama across campus through vibrant annual festivals.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center gap-2 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="notifications_active">notifications_active</span>
+<span>Auditions Tomorrow</span>
+</div>
+</a>
+<a class="flex-1 group relative rounded-xl overflow-hidden bg-surface border border-outline-variant transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] p-6 flex flex-col gap-4 justify-between block animate-fade-in-up" href="{{DATA:SCREEN:SCREEN_7}}" style="animation-delay: 0.3s;">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A minimalist, bold logo for a university entrepreneurship cell. The design incorporates an abstract, upward-trending geometric arrow merging with a lightbulb motif. It is rendered in high-contrast deep indigo and charcoal gray on a pristine white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4b0kh0HUYht6WG8NFP--CnALfYfJsJ1FtfXbrOS2LAq0Vq6D0nQYHBTLuAIGdEwxq-cpik7KDy2tm0S0RLCc4PAyUETRIjcd0QlYxDyla8ot2_weXvBH-8kkYtV1rE1k4TEwr8-MNwMzOgZhQiCtsPnZlYcZtLIl4Iz3zE5BPGx5PQxJXoZre_SopS4Jm0Iw0K0nCzukIoVOpeIeRysudptbLeTr4_ApYTlxujS-7OGDvI55s14A-"/>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[11px]">Entrepreneurship</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">E-Cell USICT</h3>
+<p class="font-body-md text-on-surface-variant text-sm line-clamp-2">Incubating ideas and fostering the next generation of student startup founders.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="forum">forum</span>
+<span>Latest: Pitch Deck Workshop</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- General Club Grid -->
+<section class="flex flex-col gap-8">
+<h2 class="font-h2 text-h2 text-on-surface border-b border-outline-variant pb-4">All Communities</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Standard Card 1 -->
+<a class="bg-surface border border-outline-variant rounded-xl overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col group block animate-fade-in-up" href="{{DATA:SCREEN:SCREEN_7}}" style="animation-delay: 0.1s;">
+<div class="h-32 bg-surface-container relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-300" data-alt="A wide, stylized photograph capturing an intense robotics competition in a modern university lab. Several intricate, metallic robots are on a bright competition arena floor. Students are visible in the blurred background. Lighting is bright and analytical, reflecting a modern institutional tech environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEytKp7lf52ZSVoTgQ3HWo1Fdi9qeIqBmDOit06IwAg6PH0Pomzqhzy196sJcwu1Iwzgf5Gr0SeWafwFzs3AW9PAvGssBYkEXvq5TcDTlZqLOxExAPgwp9krX3cm4bfYVvc3I_EOqtauzoUcdDrw9STsJplYRjmIABc6ash--b6des_dPSKseEDVk6VOtlMpX-Xm_wouBHMSjzrXew_Nfr_oNs5v3T8HiGedOeyyBsU32EkUYhXCH_')"></div>
+<div class="absolute -bottom-6 left-6 w-12 h-12 rounded border-2 border-surface bg-white shadow-sm overflow-hidden z-10">
+<img class="w-full h-full object-cover" data-alt="A sharp, minimalist logo for a robotics club. The logo is a simple, geometric representation of a mechanical gear intersecting with a digital circuit board trace. Rendered in dark grey and white to maintain a premium academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYuOHpPXUcKXW2IfYsQhKz8IJB3LWo8ZVF__s-KCrx5Q9WSxqiZLauCdy7lzw2qmhohl5lPP8IjmL10Sy3336gwbyIGMmk8waRvfnsKt8d4z_RUWXifDzgP6shKt62n0wzKLzxfmr8pkRswPqW-QPvNB3nzvKmJnt1W8qIYp3XK59JpYebpaIeIzKap5cjaul1g0UeyZkJ8haDfQlIl4mQ7lDeWZsWQnaLRa0XoglNikz__iwzxXYR"/>
+</div>
+</div>
+<div class="pt-10 px-6 pb-6 flex flex-col gap-3 flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-h3 text-h3 text-on-surface">Robotics Club</h3>
+<span class="text-xs font-label-sm px-2 py-1 bg-surface-container-high rounded text-on-surface-variant">Technical</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm flex-grow">Designing, building, and programming autonomous robots for national competitions.</p>
+<div class="mt-2 pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="update">update</span>
+<span>Updated 2 days ago</span>
+</div>
+<span class="text-primary font-label-sm text-sm group-hover:underline">View Profile</span>
+</div>
+</div>
+</a>
+<!-- Standard Card 2 -->
+<a class="bg-surface border border-outline-variant rounded-xl overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col group block animate-fade-in-up" href="{{DATA:SCREEN:SCREEN_7}}" style="animation-delay: 0.2s;">
+<div class="h-32 bg-surface-container relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-300" data-alt="A wide, stylized photograph showing a well-lit indoor sports complex at a modern university. The polished wooden floor reflects bright, even lighting. Badminton nets are set up, and the space feels expansive and energetic. The overall tone is clean, light-mode, and highly professional." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxFb5EkWOie1mtFGQTaHD14vIlCsrTHL_GD-oSzbXtM2k7F_waomlf7brm_7dav59aEWkXJKRSMMFWIhLUlAtqf4hNyhEs48rZmdUdNrwvyeCJdiec43zjChxA63uS2c-vRO9UgjSvX7hcIMtQBbNSQkoGLKIM5nSX7G2xumfs_VkmC310Z05KQIFfOVZXm9v02NH7oxXqYf1ar1Ujc73nuiRAOYoAhZk7QFoTVbelI6UL2njapdzD')"></div>
+<div class="absolute -bottom-6 left-6 w-12 h-12 rounded border-2 border-surface bg-white shadow-sm overflow-hidden z-10">
+<img class="w-full h-full object-cover" data-alt="A clean, dynamic logo for a sports society. It features abstract, swooping lines indicating motion and speed, intertwined with a minimalist laurel wreath. The design uses deep blue tones on a white background, reflecting institutional prestige and athleticism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAjC2tMB_31mEXQ8mgx5zwO5lzlrzAfX_oOqbDMoWgkmmv8r2F7YTwnY5p-_U3uvuDT79VcVLqPym9MTw1wM5q4fNIYNtCCjP4X4FskuHKlXj_VztSxt2MUCvx0kNYycATsx2HyfPb0T8BKGBpUHJFUdTswq3cS8LRqwGW9SXebNP0ZiMD5-iEvYSk7pbZYoKJPi7dI5YQe6TVgu7_KMk6HAPGVDjZLRK0s-ZyU0XevmQ5u-w03QvC"/>
+</div>
+</div>
+<div class="pt-10 px-6 pb-6 flex flex-col gap-3 flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-h3 text-h3 text-on-surface">Sports Society</h3>
+<span class="text-xs font-label-sm px-2 py-1 bg-surface-container-high rounded text-on-surface-variant">Sports</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm flex-grow">Managing intramural leagues, varsity team tryouts, and fitness initiatives across campus.</p>
+<div class="mt-2 pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="update">update</span>
+<span>Updated 1 week ago</span>
+</div>
+<span class="text-primary font-label-sm text-sm group-hover:underline">View Profile</span>
+</div>
+</div>
+</a>
+<!-- Standard Card 3 -->
+<a class="bg-surface border border-outline-variant rounded-xl overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 flex flex-col group block animate-fade-in-up" href="{{DATA:SCREEN:SCREEN_7}}" style="animation-delay: 0.3s;">
+<div class="h-32 bg-surface-container relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-300" data-alt="A stylized photograph of an editorial meeting for a student magazine. Neatly arranged papers, modern laptops, and coffee cups sit on a minimalist white conference table. The lighting is soft and diffused, creating a calm, intellectual, and premium academic mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpAYZHm3-v9IKblO0IK439vdD4sCEBPbBMN82pZzHc2o0vEAA8K2WawZoADc-v1k3BQQmYBpiPhCE1SaivwdHGAuO286EvWKjk2Y_dGoHCJhvHnNyUMDQbfXOJfjrx92I9fakRDRnWmjfFXRjFCTDZnWEP08PLfLjjyjXNtjQx81jfMyGntL9ds_MrvCnxp6dnM_LB9Cj16hAXdaFPaFQTEf8Wut_LeuVaZT_ecNGE6uAgSYvAbLER')"></div>
+<div class="absolute -bottom-6 left-6 w-12 h-12 rounded border-2 border-surface bg-white shadow-sm overflow-hidden z-10">
+<img class="w-full h-full object-cover" data-alt="A highly refined, minimalist logo for a literary and debate club. The design features a stylized, modern fountain pen nib merging with quotation marks. Rendered in strict black and white to convey editorial authority and intellectualism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPIsdPNgbNtWCT292-KSg_lpQCWeVUkxqXRbQY1gYTZ4BjONkjlTibOq8pdIz_HC5xb3MuOUjBOdXwh2WJ2eAo8A8txQ-cpcKrJHnl1OItt6bWIq-neyQQHTxb2gixj2bJbVqSGkYUDyQ-Zns7tq1TzF5vF9k9Xa_bjXarw_XJvzUvvfhDQ-sqwubuhwjjrUri_1L-3WW1cmhu6plusQyucly-I8Lk-_qQ8v-q_F-zQC2nYyjfkCB1"/>
+</div>
+</div>
+<div class="pt-10 px-6 pb-6 flex flex-col gap-3 flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-h3 text-h3 text-on-surface">Literary &amp; Debate</h3>
+<span class="text-xs font-label-sm px-2 py-1 bg-surface-container-high rounded text-on-surface-variant">Arts</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm flex-grow">Honing communication skills through structured debates, poetry slams, and the campus magazine.</p>
+<div class="mt-2 pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="update">update</span>
+<span>Updated today</span>
+</div>
+<span class="text-primary font-label-sm text-sm group-hover:underline">View Profile</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline full-width mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="col-span-1 flex flex-col gap-4">
+<div class="font-h2 text-h2 font-bold text-primary dark:text-inverse-primary">TECHYUVA</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">Empowering the USICT community through digital connectivity.</p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-body-md text-body-md transition-colors" href="#">Platform</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-body-md text-body-md transition-colors" href="#">Resources</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-body-md text-body-md transition-colors" href="#">Institution</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-body-md text-body-md transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface font-body-md text-body-md transition-colors" href="#">Contact Us</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 text-center md:text-left">
+<span class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">© 2024 TECHYUVA USICT. All rights reserved.</span>
+</div>
+</div>
+</footer>
+</body></html>

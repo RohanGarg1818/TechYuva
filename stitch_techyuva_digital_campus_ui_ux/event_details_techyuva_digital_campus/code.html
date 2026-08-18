@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Annual Tech Fest 2026 - TECHYUVA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5f",
+                        "primary": "#3525cd",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-secondary-container": "#636263",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e5e2e3",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#4d44e3",
+                        "tertiary-container": "#a44100",
+                        "on-surface": "#191c1d",
+                        "secondary-container": "#e2dfe0",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary": "#7e3000",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#c7c4d8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffd2be",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline": "#777587",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["13px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h1": ["36px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "h3": ["22px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-hero-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface w-full z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-8">
+<a class="font-h1 text-h1 font-bold text-primary dark:text-inverse-primary tracking-tight" href="#">TECHYUVA</a>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Events</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Announcements</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Notices</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Clubs</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-body-md font-body-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all w-64 placeholder-on-surface-variant" placeholder="Search events..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm px-6 py-2.5 rounded-full transition-colors hidden md:block">Explore Events</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-12">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant mb-8">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Events</a>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+<span class="text-primary font-semibold">Annual Tech Fest 2026</span>
+</nav>
+<!-- Hero Section Bento Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16">
+<!-- Main Hero Image -->
+<div class="col-span-1 lg:col-span-8 relative rounded-xl overflow-hidden shadow-sm border border-outline-variant group">
+<img alt="Event Hero Image" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed, wide-angle photograph of a massive, modern university auditorium during a tech conference. The room is flooded with bright, natural-feeling light from large architectural windows, reflecting off sleek, light-colored acoustic panels. The stage features a clean, minimalist setup with high-end digital displays showing abstract, generative blue graphics. The overall aesthetic is clean, premium, and sophisticated, aligning perfectly with a modern light-mode interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAFg8BL9_uYDfW6A8vkteRQQbU8t6sdLppUGsFGHP__6IN2Rbjxb9nk2cPBpf0polHMeXRWmGsKiyHHalMigRxkHSisNIAIHztZHpcIEL9zRFpxY5WCaUWwWavFf38OwiZKnVJlQpg-IdAwP9IBIyU1sATTWkE2eQ6SkoEj7OO0OzQzNwPtZ13eP4CFd4s-TGS3Xl4_oapvmdaU-0fTQau0j5ZmA82j_GrHmw2ZGFWfiuWyHYYdCTm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<span class="bg-error text-on-error font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm">Flagship Event</span>
+</div>
+</div>
+<!-- Quick Details Sidebar (Glassmorphism inspired) -->
+<div class="col-span-1 lg:col-span-4 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant shadow-sm flex flex-col justify-between">
+<div>
+<h1 class="font-display-hero text-h1 lg:text-[40px] leading-tight text-primary mb-6 tracking-tight">Annual Tech Fest 2026</h1>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Date &amp; Time</h3>
+<p class="font-body-md text-body-md text-on-surface font-semibold">18 Sep 2026</p>
+<p class="font-body-md text-body-md text-on-surface-variant">10:00 AM - 6:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Venue</h3>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Main Auditorium</p>
+<p class="font-body-md text-body-md text-on-surface-variant">USICT Campus, Block E</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Organized By</h3>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Computer Science Department</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant">
+<div class="flex justify-between items-center mb-4">
+<span class="font-body-md text-body-md text-on-surface-variant">Registration closes in 4 days</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Seats Filling Fast</span>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-h3 text-[18px] py-4 rounded-xl transition-all shadow-[0_4px_20px_rgba(53,37,205,0.2)] hover:shadow-[0_6px_24px_rgba(53,37,205,0.3)] transform hover:-translate-y-0.5 flex justify-center items-center gap-2">
+                        Register for Event
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Content Grid (Tabs & Main Info) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Tabs & Detailed Content -->
+<div class="col-span-1 lg:col-span-8">
+<!-- Custom Tabs Navigation -->
+<div class="flex border-b border-outline-variant mb-8 overflow-x-auto hide-scrollbar">
+<button class="px-6 py-4 font-label-sm text-label-sm uppercase tracking-wider text-primary border-b-2 border-primary whitespace-nowrap">About Event</button>
+<button class="px-6 py-4 font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Schedule</button>
+<button class="px-6 py-4 font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Speakers</button>
+<button class="px-6 py-4 font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Guidelines</button>
+</div>
+<!-- Tab Content: About -->
+<article class="prose prose-lg max-w-none text-on-surface-variant mb-16">
+<h2 class="font-h2 text-h2 text-on-surface mb-6">About the Annual Tech Fest</h2>
+<p class="font-body-lg text-body-lg mb-6 leading-relaxed">
+                        The Annual Tech Fest is USICT's premier technology and innovation gathering, bringing together the brightest minds across campus and beyond. This year's theme, "Next-Gen Architectures," focuses on the intersection of scalable systems, artificial intelligence, and sustainable computing practices.
+                    </p>
+<p class="font-body-md text-body-md mb-6">
+                        Over three meticulously planned days, participants will engage in hands-on workshops, thought-provoking panel discussions, and competitive hackathons designed to push the boundaries of what's possible. The event serves as a crucial bridge between academic theory and industry application.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[32px] mb-4" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Innovation Showcase</h3>
+<p class="text-sm">Explore cutting-edge projects developed by senior cohort students and faculty research groups.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[32px] mb-4" style="font-variation-settings: 'FILL' 1;">code</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">24Hr Hackathon</h3>
+<p class="text-sm">Compete in our rigorous coding challenge with problem statements provided by industry partners.</p>
+</div>
+</div>
+</article>
+<!-- Tab Content: Schedule (Editorial List Style) -->
+<div class="mb-16">
+<h2 class="font-h2 text-h2 text-on-surface mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+                        Event Schedule
+                    </h2>
+<div class="border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest">
+<!-- Schedule Item -->
+<div class="flex flex-col md:flex-row border-b border-outline-variant hover:bg-surface-container-low transition-colors p-6 group">
+<div class="w-full md:w-48 flex-shrink-0 mb-4 md:mb-0">
+<span class="font-h3 text-[20px] text-primary font-bold">10:00 AM</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Main Auditorium</p>
+</div>
+<div>
+<h4 class="font-h3 text-[18px] text-on-surface mb-2">Opening Ceremony &amp; Welcome Address</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Kickoff the event with insights from the Dean of Computer Science and a high-level overview of the fest's objectives.</p>
+</div>
+</div>
+<!-- Schedule Item -->
+<div class="flex flex-col md:flex-row border-b border-outline-variant hover:bg-surface-container-low transition-colors p-6 group">
+<div class="w-full md:w-48 flex-shrink-0 mb-4 md:mb-0">
+<span class="font-h3 text-[20px] text-primary font-bold">11:00 AM</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Main Auditorium</p>
+</div>
+<div>
+<span class="inline-block bg-surface-dim text-on-surface font-label-sm text-[11px] px-2 py-1 rounded mb-2">Keynote</span>
+<h4 class="font-h3 text-[18px] text-on-surface mb-2">The Future of Generative UI</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">A deep dive into how AI is reshaping interface design and component architecture.</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female technology executive in her late 30s. She is wearing a sharp, minimalist navy blazer over a white top. The background is a clean, bright, slightly blurred modern office setting with subtle natural light. High quality, editorial style portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcp3l_emqJG802yXXRymZGLgzUfnsZIdld4ILCt7qd53J1Y_JwEKqlo0Hk39cBg8_8dzgn-C-2TzbjvdLXAEj8mOOAOmwB9lKQwiQgq0QJzKPwGtv7veAnIQkKBC-FVC-UZLQTiW1AKauSgwIciHjNCeFREID9P9QAWSiEbv9LeYRt-5VkfCgNVxS96qFnrvjqMgMROG2mj7Kg901-TVyfSaC4K-ix_2_Gl6YCbQOt4vMYXOwiunYp"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Dr. Elena Rostova</span>
+</div>
+</div>
+</div>
+<!-- Schedule Item -->
+<div class="flex flex-col md:flex-row hover:bg-surface-container-low transition-colors p-6 group">
+<div class="w-full md:w-48 flex-shrink-0 mb-4 md:mb-0">
+<span class="font-h3 text-[20px] text-primary font-bold">01:00 PM</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Labs 1-4</p>
+</div>
+<div>
+<h4 class="font-h3 text-[18px] text-on-surface mb-2">Interactive Workshops: Track Selection</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Participants split into specialized tracks covering Web3, Cloud Infrastructure, and Embedded Systems.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar (Organizer & Related) -->
+<div class="col-span-1 lg:col-span-4 space-y-8">
+<!-- Organizer Contact Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant shadow-sm">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-6">Organizer Contact</h3>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-lg bg-surface-variant overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist logo graphic for a University Computer Science Department. The design features geometric nodes and lines connecting in a modern, abstract pattern, rendered in deep indigo and subtle greys on a pristine white background. Corporate and academic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgbueeX66yUwggw0icxjZTI366If5Vo_cXMkjGEhnOLmCfMqYnP3sbKKB8Ul8m2UeOlNdbeaONKJf0RNxIct8qWw8SREqSet8fmiCoyzi7SS4bPgCMHvHEhNA2AEFowPtCU9XQfaVM3MPyt6MPezzfF-tTWj3V-Mm6GFQXm6Z8-tjC0Z8ZtePY4ydaCx43Y-dumSggWM5F6waB7UCHB7UmE1rJQAgtj5jPAW8XrjhU9XysTT2ZRbmg"/>
+</div>
+<div>
+<h4 class="font-h3 text-[18px] text-on-surface">Prof. A. Sharma</h4>
+<p class="font-body-md text-[14px] text-on-surface-variant">Event Coordinator</p>
+</div>
+</div>
+<div class="space-y-4">
+<a class="flex items-center gap-3 text-body-md hover:text-primary transition-colors" href="mailto:events@usict.edu">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">mail</span>
+<span>events@techyuva.edu</span>
+</a>
+<div class="flex items-center gap-3 text-body-md">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">call</span>
+<span>+91 98765 43210</span>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border border-outline-variant rounded-lg font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low transition-colors">View Department Page</button>
+</div>
+<!-- Related Events (Mini Cards) -->
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4 px-2">Related Events</h3>
+<div class="space-y-4">
+<!-- Mini Event Card -->
+<a class="block bg-surface-container-lowest rounded-lg p-4 border border-outline-variant hover:border-primary hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all group" href="#">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded bg-surface-variant overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up, high-quality image of hands typing rapidly on a mechanical keyboard with subtle RGB backlighting. The setting is dark but illuminated by the bright glow of dual monitors displaying complex code. The aesthetic is modern, tech-focused, and slightly moody but clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNBc5hnzgdiG9r-TqnNxTt8KpQcwTKPSn80yaQZPAbG4SUQ7xNRQh1gcCO5Ij69TFQuGo1fknsaHqQ__CU1LoPd8hswcfc5e3uAfF37f33LAKXOSXadHYRS1i9DvRThqEW9bY9eF-X2g5iDDAI-VVpxyddDMZbUYbvpO8mJdfGEQB0JFLtsEwoRGQBbWVXaRzbYM1WNwU36SdDR23UMK_XRkV5TlgAufL6HcyJ04tiepIjtvPaE1V9"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-sm text-[11px] text-primary mb-1">20 Sep 2026</span>
+<h4 class="font-body-md font-semibold text-on-surface leading-tight group-hover:text-primary transition-colors">CodeSprint Hackathon</h4>
+<span class="font-label-sm text-[12px] text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Library Block
+                                    </span>
+</div>
+</div>
+</a>
+<!-- Mini Event Card -->
+<a class="block bg-surface-container-lowest rounded-lg p-4 border border-outline-variant hover:border-primary hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all group" href="#">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded bg-surface-variant overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A clean, bright photograph of an engineering workshop table covered with small robotics components, microcontrollers, and soldering tools. The lighting is soft and white, highlighting the metallic textures of the parts. Minimalist, academic, light-mode friendly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPGdyt9WFq98j-qiLtAlRlO5t1ocOH7U_35sdmzion-coaGvjuVyUp00ipiE8232fdTDbQsJNM4C4YIzEG4B-grx9d2gwT8pGM_VJcH70DgnJLJoU3hqH3mWR4m83WIgU2qPxOrn7wZ718aN3fJzF_AkLCENGG1u9h3GuNSTMmMoZdFojmNaxxv7cH02GVx-kc1uDD15RckywftgmN5fhSx2Bm5WOQ7kW0XDESWVek7s22CLxUnFHV"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-sm text-[11px] text-primary mb-1">22 Sep 2026</span>
+<h4 class="font-body-md font-semibold text-on-surface leading-tight group-hover:text-primary transition-colors">Robotics Symposium</h4>
+<span class="font-label-sm text-[12px] text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Seminar Hall B
+                                    </span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full mt-auto border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto text-on-surface dark:text-inverse-on-surface font-body-md text-body-md">
+<div class="col-span-1 md:col-span-1">
+<a class="font-h2 text-h2 font-bold text-primary dark:text-inverse-primary block mb-6" href="#">TECHYUVA</a>
+<p class="text-on-surface-variant dark:text-surface-variant mb-6">Empowering innovation and technical excellence at USICT.</p>
+<p class="text-on-surface-variant dark:text-surface-variant">© 2024 TECHYUVA USICT. All rights reserved.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-h3 text-h3 mb-6">Platform</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Events</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Notices</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Clubs</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-h3 text-h3 mb-6">Institution</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">About USICT</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Departments</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Resources</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-h3 text-h3 mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
