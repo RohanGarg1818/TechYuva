@@ -5,6 +5,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { mockEvents } from '@/data/events';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
+import { AuroraBackground } from '@/components/ui/AuroraBackground';
+import { MagneticButton } from '@/components/ui/MagneticButton';
+import { FadeIn } from '@/components/ui/FadeIn';
+import { motion } from 'framer-motion';
 
 interface EventDetailsPageProps {
   params: {
@@ -21,365 +25,313 @@ export default function EventDetailsPage({ params }: EventDetailsPageProps) {
     notFound();
   }
 
-  const relatedEvents = mockEvents.filter((e) => e.id !== event.id).slice(0, 2);
+  const relatedEvents = mockEvents.filter((e) => e.id !== event.id).slice(0, 3);
 
   return (
-    <div className="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12">
-      {/* Breadcrumbs */}
-      <Breadcrumb
-        items={[
-          { label: 'Events', href: '/events' },
-          { label: event.title },
-        ]}
-        className="mb-8"
-      />
-
-      {/* Hero Bento Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-12 lg:mb-16">
-        {/* Main Hero Image */}
-        <div className="col-span-1 lg:col-span-8 relative rounded-xl overflow-hidden shadow-sm border border-outline-variant group bg-surface-container-low min-h-[300px] lg:min-h-[460px]">
-          <img
-            src={event.image}
-            alt={event.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-            <span className="bg-error text-on-error font-label-sm text-xs px-3.5 py-1 rounded shadow-sm uppercase tracking-wider font-bold">
-              Flagship Event
-            </span>
-            <span className="text-white text-xs font-semibold bg-black/40 backdrop-blur-sm px-3 py-1 rounded">
-              USICT Campus
-            </span>
-          </div>
-        </div>
-
-        {/* Quick Details Sidebar */}
-        <div className="col-span-1 lg:col-span-4 bg-surface-container-lowest rounded-xl p-6 sm:p-8 border border-outline-variant shadow-sm flex flex-col justify-between">
-          <div>
-            <span className="text-primary font-label-sm text-xs font-bold uppercase tracking-wider block mb-1">
-              {event.category}
-            </span>
-            <h1 className="font-h2 text-h2 text-on-surface mb-6 leading-tight">
-              {event.title}
-            </h1>
-
-            <div className="space-y-5">
-              {/* Date & Time */}
-              <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-lg bg-primary-fixed flex items-center justify-center flex-shrink-0 text-primary">
-                  <span className="material-symbols-outlined text-[22px]">calendar_month</span>
-                </div>
-                <div>
-                  <h3 className="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider font-semibold mb-0.5">
-                    Date & Time
-                  </h3>
-                  <p className="font-body-md text-sm font-semibold text-on-surface">{event.date}</p>
-                  <p className="font-body-md text-xs text-on-surface-variant">{event.time}</p>
-                </div>
-              </div>
-
-              {/* Venue */}
-              <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-lg bg-primary-fixed flex items-center justify-center flex-shrink-0 text-primary">
-                  <span className="material-symbols-outlined text-[22px]">location_on</span>
-                </div>
-                <div>
-                  <h3 className="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider font-semibold mb-0.5">
-                    Venue
-                  </h3>
-                  <p className="font-body-md text-sm font-semibold text-on-surface">{event.venue}</p>
-                </div>
-              </div>
-
-              {/* Organizer */}
-              <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-lg bg-primary-fixed flex items-center justify-center flex-shrink-0 text-primary">
-                  <span className="material-symbols-outlined text-[22px]">group</span>
-                </div>
-                <div>
-                  <h3 className="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider font-semibold mb-0.5">
-                    Organized By
-                  </h3>
-                  <p className="font-body-md text-sm font-semibold text-on-surface">{event.organizer}</p>
-                  <p className="font-body-md text-xs text-on-surface-variant">{event.department}</p>
-                </div>
-              </div>
+    <AuroraBackground className="min-h-screen">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-16 md:pb-24 relative z-20">
+        
+        <FadeIn>
+          {/* Cinematic Hero Banner */}
+          <div className="group relative w-full h-[350px] md:h-[450px] lg:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl mb-12">
+            {/* Background Image */}
+            <div className="absolute inset-0 w-full h-full">
+              <img 
+                src={event.image} 
+                alt={event.title}
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              {/* Heavy Gradient Overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent opacity-90" />
+            </div>
+            
+            {/* Content Overlay */}
+            <div className="absolute inset-0 p-6 md:p-12 flex flex-col justify-end">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-heading text-white mb-4 leading-[1.1]">
+                {event.title}
+              </h1>
             </div>
           </div>
+        </FadeIn>
 
-          <div className="mt-8 pt-6 border-t border-outline-variant">
-            <div className="flex justify-between items-center mb-4 text-xs">
-              <span className="text-on-surface-variant">{event.registrationDeadline || 'Registrations Open'}</span>
-              <span className="text-error font-bold">Limited Seats</span>
-            </div>
-
-            <button
-              onClick={() => setRegistered(!registered)}
-              className={`w-full py-3.5 rounded-lg font-label-sm text-sm font-bold transition-all shadow-md flex justify-center items-center gap-2 ${
-                registered
-                  ? 'bg-surface-container-high text-on-surface border border-outline'
-                  : 'bg-primary hover:bg-primary-container text-on-primary'
-              }`}
-            >
-              {registered ? (
-                <>
-                  <span className="material-symbols-outlined text-[18px]">check_circle</span>
-                  Registered for Event
-                </>
-              ) : (
-                <>
-                  Register for Event
-                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Content Grid: Tabs & Sidebar */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-        {/* Left 8-col: Tabs & Detail Content */}
-        <div className="col-span-1 lg:col-span-8 space-y-10">
-          {/* Tabs Navigation */}
-          <div className="flex border-b border-outline-variant overflow-x-auto hide-scrollbar">
-            <button
-              onClick={() => setActiveTab('about')}
-              className={`px-6 py-4 font-label-sm text-xs sm:text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${
-                activeTab === 'about'
-                  ? 'text-primary border-b-2 border-primary font-bold'
-                  : 'text-on-surface-variant hover:text-on-surface font-medium'
-              }`}
-            >
-              About Event
-            </button>
-            <button
-              onClick={() => setActiveTab('schedule')}
-              className={`px-6 py-4 font-label-sm text-xs sm:text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${
-                activeTab === 'schedule'
-                  ? 'text-primary border-b-2 border-primary font-bold'
-                  : 'text-on-surface-variant hover:text-on-surface font-medium'
-              }`}
-            >
-              Schedule & Timeline
-            </button>
-            <button
-              onClick={() => setActiveTab('guidelines')}
-              className={`px-6 py-4 font-label-sm text-xs sm:text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${
-                activeTab === 'guidelines'
-                  ? 'text-primary border-b-2 border-primary font-bold'
-                  : 'text-on-surface-variant hover:text-on-surface font-medium'
-              }`}
-            >
-              Guidelines & Rules
-            </button>
-          </div>
-
-          {/* Tab 1: About */}
-          {activeTab === 'about' && (
-            <article className="space-y-8 animate-in fade-in duration-200">
-              <div>
-                <h2 className="font-h2 text-h2 text-on-surface mb-4">Event Overview</h2>
-                <p className="font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
-                  {event.fullDescription || event.description}
-                </p>
+        {/* Two-Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          
+          {/* Main Content (Left 8 cols) */}
+          <div className="col-span-1 lg:col-span-8 flex flex-col gap-8">
+            
+            {/* iOS-Style Segmented Tabs */}
+            <FadeIn delay={0.1}>
+              <div className="flex gap-1 bg-white/40 backdrop-blur-md p-1.5 rounded-full inline-flex border border-white/60 shadow-glass">
+                {(['about', 'schedule', 'guidelines'] as const).map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`relative px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 capitalize ${
+                      activeTab === tab 
+                        ? 'text-slate-900' 
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    {activeTab === tab && (
+                      <motion.div
+                        layoutId="event-tab-indicator"
+                        className="absolute inset-0 bg-white rounded-full shadow-sm border border-slate-200/50"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                    <span className="relative z-10">
+                      {tab === 'about' ? 'Overview' : tab === 'schedule' ? 'Schedule' : 'Guidelines'}
+                    </span>
+                  </button>
+                ))}
               </div>
+            </FadeIn>
 
-              {event.highlights && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-8">
-                  {event.highlights.map((h, i) => (
-                    <div
-                      key={i}
-                      className="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm"
-                    >
-                      <span className="material-symbols-outlined text-primary text-[32px] mb-3">
-                        {h.icon}
-                      </span>
-                      <h3 className="font-h3 text-h3 text-on-surface mb-2">{h.title}</h3>
-                      <p className="font-body-md text-sm text-on-surface-variant">{h.description}</p>
+            {/* Tab Content Container */}
+            <FadeIn delay={0.2}>
+              <div className="bg-white/60 backdrop-blur-xl border border-white/50 shadow-glass rounded-[2rem] p-6 md:p-10 min-h-[400px]">
+                {/* Tab 1: About */}
+                {activeTab === 'about' && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="space-y-8"
+                  >
+                    <div>
+                      <h2 className="text-2xl font-bold font-heading text-slate-900 mb-4">Event Overview</h2>
+                      <p className="text-lg text-slate-700 leading-relaxed">
+                        {event.fullDescription || event.description}
+                      </p>
                     </div>
-                  ))}
-                </div>
-              )}
-            </article>
-          )}
 
-          {/* Tab 2: Schedule */}
-          {activeTab === 'schedule' && (
-            <div className="space-y-6 animate-in fade-in duration-200">
-              <h2 className="font-h2 text-h2 text-on-surface flex items-center gap-2.5">
-                <span className="material-symbols-outlined text-primary text-[28px]">schedule</span>
-                Event Schedule
-              </h2>
-
-              {event.schedule ? (
-                <div className="border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest divide-y divide-outline-variant">
-                  {event.schedule.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="flex flex-col md:flex-row hover:bg-surface-container-low transition-colors p-6 group gap-4"
-                    >
-                      <div className="w-full md:w-44 flex-shrink-0">
-                        <span className="font-h3 text-[18px] text-primary font-bold">{item.time}</span>
-                        <p className="font-label-sm text-xs text-on-surface-variant uppercase mt-1">
-                          {item.venue}
-                        </p>
+                    {event.highlights && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                        {event.highlights.map((h, i) => (
+                          <div key={i} className="bg-white/50 p-6 rounded-2xl border border-white/60 shadow-sm">
+                            <span className="material-symbols-outlined text-blue-600 text-[32px] mb-3">
+                              {h.icon}
+                            </span>
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">{h.title}</h3>
+                            <p className="text-sm text-slate-600">{h.description}</p>
+                          </div>
+                        ))}
                       </div>
-                      <div className="flex-grow">
-                        {item.badge && (
-                          <span className="inline-block bg-primary-fixed text-primary font-label-sm text-[11px] font-bold px-2 py-0.5 rounded mb-2 uppercase tracking-wider">
-                            {item.badge}
-                          </span>
-                        )}
-                        <h4 className="font-h3 text-[17px] text-on-surface mb-1.5 font-bold">
-                          {item.title}
-                        </h4>
-                        <p className="font-body-md text-sm text-on-surface-variant mb-3">
-                          {item.description}
-                        </p>
-                        {item.speaker && (
-                          <div className="flex items-center gap-3 pt-2">
-                            <div className="w-8 h-8 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
-                              <img
-                                src={item.speaker.avatar}
-                                alt={item.speaker.name}
-                                className="w-full h-full object-cover"
-                              />
+                    )}
+                  </motion.div>
+                )}
+
+                {/* Tab 2: Schedule */}
+                {activeTab === 'schedule' && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="space-y-6"
+                  >
+                    <h2 className="text-2xl font-bold font-heading text-slate-900 mb-6 flex items-center gap-3">
+                      <span className="material-symbols-outlined text-blue-600">schedule</span>
+                      Official Schedule
+                    </h2>
+
+                    {event.schedule ? (
+                      <div className="space-y-4">
+                        {event.schedule.map((item, idx) => (
+                          <div key={idx} className="flex flex-col md:flex-row bg-white/50 rounded-2xl border border-white/60 p-6 gap-6 hover:bg-white/80 transition-colors shadow-sm">
+                            <div className="md:w-40 flex-shrink-0">
+                              <span className="text-lg text-blue-600 font-bold block">{item.time}</span>
+                              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{item.venue}</span>
                             </div>
                             <div>
-                              <span className="font-label-sm text-xs font-bold text-on-surface block">
-                                {item.speaker.name}
-                              </span>
-                              <span className="text-[11px] text-on-surface-variant block">
-                                {item.speaker.role}
-                              </span>
+                              {item.badge && (
+                                <span className="inline-block bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded mb-2 uppercase tracking-widest">
+                                  {item.badge}
+                                </span>
+                              )}
+                              <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
+                              <p className="text-sm text-slate-600">{item.description}</p>
+                              
+                              {item.speaker && (
+                                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200/50">
+                                  <img src={item.speaker.avatar} alt={item.speaker.name} className="w-10 h-10 rounded-full object-cover shadow-sm" />
+                                  <div>
+                                    <span className="text-sm font-bold text-slate-900 block">{item.speaker.name}</span>
+                                    <span className="text-xs text-slate-500">{item.speaker.role}</span>
+                                  </div>
+                                </div>
+                              )}
                             </div>
                           </div>
-                        )}
+                        ))}
                       </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="p-8 bg-surface-container-lowest border border-outline-variant rounded-lg text-center text-on-surface-variant">
-                  Detailed schedule will be released 48 hours before the event.
-                </div>
-              )}
-            </div>
-          )}
+                    ) : (
+                      <div className="p-12 text-center text-slate-500 font-medium bg-white/40 rounded-2xl border border-dashed border-slate-300">
+                        Detailed schedule will be released 48 hours before the event.
+                      </div>
+                    )}
+                  </motion.div>
+                )}
 
-          {/* Tab 3: Guidelines */}
-          {activeTab === 'guidelines' && (
-            <div className="space-y-6 animate-in fade-in duration-200">
-              <h2 className="font-h2 text-h2 text-on-surface flex items-center gap-2.5">
-                <span className="material-symbols-outlined text-primary text-[28px]">policy</span>
-                Participation Guidelines
-              </h2>
-              <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-xl border border-outline-variant space-y-4">
-                {event.guidelines && event.guidelines.length > 0 ? (
-                  <ul className="space-y-3.5">
-                    {event.guidelines.map((rule, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-body-md text-on-surface-variant text-sm sm:text-base">
-                        <span className="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">
-                          check_circle
-                        </span>
-                        <span>{rule}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-on-surface-variant text-sm">
-                    Standard USICT campus code of conduct applies to all participants.
-                  </p>
+                {/* Tab 3: Guidelines */}
+                {activeTab === 'guidelines' && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="space-y-6"
+                  >
+                    <h2 className="text-2xl font-bold font-heading text-slate-900 mb-6 flex items-center gap-3">
+                      <span className="material-symbols-outlined text-blue-600">policy</span>
+                      Rules & Guidelines
+                    </h2>
+                    <div className="bg-white/50 p-6 md:p-8 rounded-2xl border border-white/60 shadow-sm">
+                      {event.guidelines && event.guidelines.length > 0 ? (
+                        <ul className="space-y-4">
+                          {event.guidelines.map((rule, idx) => (
+                            <li key={idx} className="flex items-start gap-4 text-slate-700">
+                              <span className="material-symbols-outlined text-blue-600 mt-0.5">check_circle</span>
+                              <span className="font-medium">{rule}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-slate-600 font-medium">Standard USICT campus code of conduct applies to all participants.</p>
+                      )}
+                    </div>
+                  </motion.div>
                 )}
               </div>
-            </div>
-          )}
-        </div>
-
-        {/* Right 4-col: Organizer & Related Events */}
-        <div className="col-span-1 lg:col-span-4 space-y-8">
-          {/* Organizer Card */}
-          <div className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant shadow-sm">
-            <h3 className="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider font-bold mb-6">
-              Organizer Details
-            </h3>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden border border-outline-variant flex-shrink-0">
-                <img
-                  src={event.organizerLogo || 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgbueeX66yUwggw0icxjZTI366If5Vo_cXMkjGEhnOLmCfMqYnP3sbKKB8Ul8m2UeOlNdbeaONKJf0RNxIct8qWw8SREqSet8fmiCoyzi7SS4bPgCMHvHEhNA2AEFowPtCU9XQfaVM3MPyt6MPezzfF-tTWj3V-Mm6GFQXm6Z8-tjC0Z8ZtePY4ydaCx43Y-dumSggWM5F6waB7UCHB7UmE1rJQAgtj5jPAW8XrjhU9XysTT2ZRbmg'}
-                  alt={event.organizer}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h4 className="font-h3 text-base text-on-surface font-bold">{event.organizer}</h4>
-                <p className="font-body-md text-xs text-on-surface-variant">{event.organizerRole || 'Event Coordinating Body'}</p>
-              </div>
-            </div>
-
-            <div className="space-y-3 text-sm font-body-md">
-              <a
-                href={`mailto:${event.organizerEmail || 'events@techyuva.edu'}`}
-                className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors py-1"
-              >
-                <span className="material-symbols-outlined text-[18px]">mail</span>
-                <span className="truncate">{event.organizerEmail || 'events@techyuva.edu'}</span>
-              </a>
-              <div className="flex items-center gap-3 text-on-surface-variant py-1">
-                <span className="material-symbols-outlined text-[18px]">call</span>
-                <span>{event.organizerPhone || '+91 98765 43210'}</span>
-              </div>
-            </div>
-
-            <Link
-              href="/about#departments"
-              className="w-full mt-6 py-2.5 border border-outline-variant rounded-lg font-label-sm text-xs font-semibold text-on-surface hover:bg-surface-container-low transition-colors block text-center"
-            >
-              View Department Page
-            </Link>
+            </FadeIn>
           </div>
 
-          {/* Related Events */}
-          <div>
-            <h3 className="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider font-bold mb-4 px-1">
-              Related Events
-            </h3>
-            <div className="space-y-4">
-              {relatedEvents.map((rel) => (
-                <Link
-                  key={rel.id}
-                  href={`/events/${rel.slug}`}
-                  className="block bg-surface-container-lowest rounded-lg p-4 border border-outline-variant hover:border-primary hover:shadow-subtle transition-all group"
-                >
-                  <div className="flex gap-4">
-                    <div className="w-20 h-20 rounded bg-surface-variant overflow-hidden flex-shrink-0">
-                      <img
-                        src={rel.image}
-                        alt={rel.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                      />
+          {/* Sidebar (Right 4 cols) */}
+          <div className="col-span-1 lg:col-span-4 flex flex-col gap-8">
+            
+            {/* Action / Details Card */}
+            <FadeIn delay={0.1}>
+              <div className="bg-white/60 backdrop-blur-xl border border-white/50 shadow-glass rounded-[2rem] p-6 md:p-8">
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <span className="material-symbols-outlined text-[24px]">calendar_month</span>
                     </div>
-                    <div className="flex flex-col justify-center min-w-0">
-                      <span className="font-label-sm text-[11px] text-primary font-bold mb-1">
-                        {rel.date}
+                    <div>
+                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Date & Time</span>
+                      <p className="font-bold text-slate-900 text-base">{event.date}</p>
+                      <p className="text-sm font-medium text-slate-600">{event.time}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <span className="material-symbols-outlined text-[24px]">location_on</span>
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Venue</span>
+                      <p className="font-bold text-slate-900 text-base">{event.venue}</p>
+                      <p className="text-sm font-medium text-slate-600">USICT Campus</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-slate-200/60">
+                  <div className="flex flex-col gap-3 mb-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        {event.registrationDeadline ? `Closes: ${event.registrationDeadline}` : 'Status: Open Now'}
                       </span>
-                      <h4 className="font-body-md text-sm font-semibold text-on-surface leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                        {rel.title}
-                      </h4>
-                      <span className="font-label-sm text-[11px] text-on-surface-variant mt-1.5 flex items-center gap-1">
-                        <span className="material-symbols-outlined text-[14px]">location_on</span>
-                        <span className="truncate">{rel.venue}</span>
+                      <span className="text-[10px] font-bold text-red-600 bg-red-500/10 border border-red-500/20 px-2.5 py-1 rounded-full uppercase tracking-widest flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                        Limited Seats
                       </span>
                     </div>
                   </div>
-                </Link>
-              ))}
-            </div>
+
+                  <MagneticButton stiffness={150} className="w-full">
+                    <button
+                      onClick={() => setRegistered(!registered)}
+                      className={`w-full py-4 rounded-xl text-sm font-bold transition-all flex justify-center items-center gap-2 shadow-lg ${
+                        registered
+                          ? 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-emerald-500/30'
+                          : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/30'
+                      }`}
+                    >
+                      {registered ? (
+                        <>
+                          <span className="material-symbols-outlined text-[20px]">check_circle</span>
+                          Registered
+                        </>
+                      ) : (
+                        <>
+                          Register Now
+                          <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+                        </>
+                      )}
+                    </button>
+                  </MagneticButton>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Organizer Card */}
+            <FadeIn delay={0.2}>
+              <div className="bg-white/60 backdrop-blur-xl border border-white/50 shadow-glass rounded-[2rem] p-6 md:p-8">
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Organized By</h3>
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <img
+                    src={event.organizerLogo || 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgbueeX66yUwggw0icxjZTI366If5Vo_cXMkjGEhnOLmCfMqYnP3sbKKB8Ul8m2UeOlNdbeaONKJf0RNxIct8qWw8SREqSet8fmiCoyzi7SS4bPgCMHvHEhNA2AEFowPtCU9XQfaVM3MPyt6MPezzfF-tTWj3V-Mm6GFQXm6Z8-tjC0Z8ZtePY4ydaCx43Y-dumSggWM5F6waB7UCHB7UmE1rJQAgtj5jPAW8XrjhU9XysTT2ZRbmg'}
+                    alt={event.organizer}
+                    className="w-16 h-16 rounded-2xl object-cover shadow-sm border border-slate-200/50"
+                  />
+                  <div>
+                    <h4 className="text-base font-bold text-slate-900 leading-tight mb-1">{event.organizer}</h4>
+                    <p className="text-xs font-medium text-slate-500">{event.organizerRole || 'Coordinating Body'}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <a href={`mailto:${event.organizerEmail || 'events@techyuva.edu'}`} className="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+                    <span className="material-symbols-outlined text-[18px]">mail</span>
+                    {event.organizerEmail || 'events@techyuva.edu'}
+                  </a>
+                  <div className="flex items-center gap-3 text-sm font-medium text-slate-600">
+                    <span className="material-symbols-outlined text-[18px]">call</span>
+                    {event.organizerPhone || '+91 98765 43210'}
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Related Events */}
+            <FadeIn delay={0.3}>
+              <div className="bg-white/60 backdrop-blur-xl border border-white/50 shadow-glass rounded-[2rem] p-6 md:p-8">
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">More Events</h3>
+                <div className="space-y-4">
+                  {relatedEvents.map((rel) => (
+                    <Link
+                      key={rel.id}
+                      href={`/events/${rel.slug}`}
+                      className="group flex gap-4 p-3 -mx-3 rounded-2xl hover:bg-white/80 transition-colors"
+                    >
+                      <img
+                        src={rel.image}
+                        alt={rel.title}
+                        className="w-20 h-20 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform"
+                      />
+                      <div className="flex flex-col justify-center">
+                        <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">{rel.date}</span>
+                        <h4 className="text-sm font-bold text-slate-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                          {rel.title}
+                        </h4>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
           </div>
         </div>
       </div>
-    </div>
+    </AuroraBackground>
   );
 }

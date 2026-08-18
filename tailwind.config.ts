@@ -10,11 +10,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        card: "rgb(var(--card) / <alpha-value>)",
+        "card-foreground": "rgb(var(--card-foreground) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
+        primary: "rgb(var(--primary) / <alpha-value>)",
+        "primary-foreground": "rgb(var(--primary-foreground) / <alpha-value>)",
+        secondary: "rgb(var(--secondary) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        "muted-foreground": "rgb(var(--muted-foreground) / <alpha-value>)",
+        "glass-bg": "var(--glass-bg)",
+        "glass-border": "var(--glass-border)",
+        
         "error-container": "#ffdad6",
-        "inverse-on-surface": "#f0f1f2",
         "on-error-container": "#93000a",
         "secondary": "#5f5e5f",
-        "primary": "#3525cd",
         "surface-container-low": "#f3f4f5",
         "surface": "#f8f9fa",
         "on-primary-container": "#dad7ff",
@@ -49,7 +61,6 @@ const config: Config = {
         "secondary-fixed-dim": "#c8c6c7",
         "surface-container-high": "#e7e8e9",
         "surface-variant": "#e1e3e4",
-        "background": "#f8f9fa",
         "outline": "#777587",
         "error": "#ba1a1a",
         "on-primary": "#ffffff",
@@ -103,6 +114,40 @@ const config: Config = {
         "subtle": "0 4px 20px rgba(0, 0, 0, 0.04)",
         "elevated": "0 8px 30px rgba(0, 0, 0, 0.06)",
         "card": "0 2px 10px rgba(0, 0, 0, 0.03)",
+        "glass": "0 8px 32px 0 rgba(31, 38, 135, 0.07)",
+        "glass-hover": "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
+        "neon": "0 0 10px rgba(79, 70, 229, 0.5), 0 0 20px rgba(79, 70, 229, 0.3)",
+      },
+      animation: {
+        "blob": "blob 7s infinite",
+        "float": "float 6s ease-in-out infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "aurora": "aurora 60s linear infinite",
+        "marquee": "marquee 30s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - 2rem))" },
+        },
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
       }
     },
   },

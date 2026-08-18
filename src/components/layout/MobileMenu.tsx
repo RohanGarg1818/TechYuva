@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -59,26 +60,20 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
 
         {/* Links */}
         <div className="flex-grow overflow-y-auto py-6 px-6 space-y-1">
-          {links.map((link) => {
-            const active =
-              link.href === '/'
-                ? currentPath === '/'
-                : currentPath.startsWith(link.href);
+          {links.map((link, i) => {
+            const active = currentPath === link.href;
             return (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={onClose}
-                className={`flex items-center justify-between px-4 py-3.5 rounded-lg text-body-lg font-medium transition-all ${
-                  active
-                    ? 'bg-primary text-on-primary font-bold shadow-sm'
-                    : 'text-on-surface hover:bg-surface-container-high'
+                className={`block px-4 py-4 text-lg font-semibold rounded-2xl transition-colors ${
+                  active 
+                    ? 'bg-blue-600/10 text-blue-600' 
+                    : 'text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                <span>{link.name}</span>
-                <span className="material-symbols-outlined text-[20px] opacity-70">
-                  chevron_right
-                </span>
+                {link.name}
               </Link>
             );
           })}

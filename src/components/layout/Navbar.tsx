@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SearchBar } from '@/components/ui/SearchBar';
 import { MobileMenu } from '@/components/layout/MobileMenu';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -19,6 +22,12 @@ const navLinks = [
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    setScrolled(latest > 20);
+  });
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
@@ -27,44 +36,55 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <header className="bg-surface border-b border-outline-variant sticky top-0 z-40 w-full">
+      <header
+        className={cn(
+          'fixed top-0 inset-x-0 z-[100] w-full transition-all duration-300 ease-in-out',
+          scrolled 
+            ? 'bg-slate-50/80 backdrop-blur-2xl border-b border-white shadow-[5px_5px_15px_rgba(163,177,198,0.3),-5px_-5px_15px_rgba(255,255,255,0.8)]' 
+            : 'bg-transparent border-b border-transparent'
+        )}
+      >
         <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20">
-          {/* Mobile Hamburger (visible on < lg) */}
+          
+          {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open Navigation Menu"
-            className="lg:hidden p-2 -ml-2 text-on-surface hover:text-primary transition-colors focus:outline-none"
+            className="lg:hidden p-2 -ml-2 text-slate-800 hover:text-primary transition-colors focus:outline-none"
           >
             <span className="material-symbols-outlined text-[26px]">menu</span>
           </button>
 
           {/* Brand Logo */}
-          <Link href="/" className="flex items-baseline gap-1.5 sm:gap-2 flex-shrink-0 group">
-            <span className="font-h1 text-xl sm:text-2xl lg:text-3xl font-bold text-primary tracking-tight group-hover:opacity-90 transition-opacity">
+          <Link href="/" className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0 group">
+            <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-slate-900 group-hover:opacity-80 transition-opacity">
               TECHYUVA
             </span>
-            <span className="text-[10px] sm:text-[11px] font-bold text-on-surface-variant uppercase tracking-wider bg-surface-container-high px-1.5 py-0.5 rounded">
+            <span className="text-[9px] sm:text-[10px] font-bold text-white uppercase tracking-widest bg-blue-600 px-1.5 py-0.5 rounded-sm">
               USICT
             </span>
           </Link>
 
-          {/* Desktop Navigation Links (visible on lg+) */}
-          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-2 h-full">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center h-full relative gap-1 xl:gap-2">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`h-full flex items-center px-2.5 xl:px-3.5 text-xs xl:text-sm font-medium transition-colors relative whitespace-nowrap ${
-                    active
-                      ? 'text-primary font-bold'
-                      : 'text-on-surface-variant hover:text-primary'
-                  }`}
+                  className={cn(
+                    'relative px-3 py-2 text-[13px] xl:text-sm font-semibold transition-colors rounded-md',
+                    active ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/50'
+                  )}
                 >
-                  {link.name}
+                  <span className="relative z-10">{link.name}</span>
                   {active && (
-                    <span className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary" />
+                    <motion.div
+                      layoutId="navbar-indicator"
+                      className="absolute bottom-0 left-3 right-3 h-[2px] bg-blue-600 rounded-t-full"
+                      transition={{ type: 'spring', bounce: 0.25, duration: 0.5 }}
+                    />
                   )}
                 </Link>
               );
@@ -72,34 +92,41 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-2 xl:gap-3 flex-shrink-0">
-            {/* Search Input (visible on xl+) */}
+          <div className="flex items-center gap-3 xl:gap-4 flex-shrink-0">
             <div className="hidden xl:block">
-              <SearchBar placeholder="Search campus..." variant="nav" className="w-48 xl:w-56" />
+              <SearchBar 
+                placeholder="Search campus..." 
+                variant="nav" 
+                className="w-48 bg-slate-100/80 border border-slate-200/60 focus-within:bg-white focus-within:border-blue-400 transition-colors shadow-none text-sm h-9 rounded-full" 
+              />
             </div>
 
-            {/* Search Icon button (visible on lg only) */}
             <Link
               href="/search"
               aria-label="Search"
-              className="hidden lg:flex xl:hidden p-2 text-on-surface-variant hover:text-primary transition-colors"
+              className="hidden lg:flex xl:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors"
             >
-              <span className="material-symbols-outlined text-[22px]">search</span>
+              <span className="material-symbols-outlined text-[20px]">search</span>
             </Link>
 
-            {/* Explore Events Button (visible on md+) */}
-            <Link
-              href="/events"
-              className="hidden sm:inline-flex bg-primary text-on-primary text-xs xl:text-sm font-semibold px-3.5 py-2 xl:px-5 xl:py-2.5 rounded hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap"
-            >
-              Explore Events
-            </Link>
+            <div className="hidden lg:flex items-center space-x-4">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/events"
+                  className="hidden sm:inline-flex bg-slate-900 text-white text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-blue-600 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all whitespace-nowrap"
+                >
+                  Join Event
+                </Link>
+              </motion.div>
+              <div className="pl-2 border-l border-slate-200/50">
+                <ThemeToggle />
+              </div>
+            </div>
 
-            {/* Mobile Search Icon (visible on < lg) */}
             <Link
               href="/search"
               aria-label="Search"
-              className="lg:hidden p-2 -mr-2 text-on-surface hover:text-primary transition-colors"
+              className="lg:hidden p-2 -mr-2 text-slate-800 hover:text-blue-600 transition-colors"
             >
               <span className="material-symbols-outlined text-[24px]">search</span>
             </Link>
