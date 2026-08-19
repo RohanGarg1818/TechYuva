@@ -1,10 +1,9 @@
 import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { mockEvents } from '@/data/events';
-import { mockNotices } from '@/data/notices';
 import { mockAnnouncements } from '@/data/announcements';
 import { mockClubs } from '@/data/clubs';
 import { mockResources } from '@/data/resources';
-import { EventItem, NoticeItem, AnnouncementItem, ClubItem, ResourceItem } from '@/types';
+import { EventItem, AnnouncementItem, ClubItem, ResourceItem } from '@/types';
 
 // ==========================================
 // EVENTS SERVICE
@@ -99,78 +98,6 @@ export async function getEventBySlug(slug: string): Promise<EventItem | null> {
     };
   } catch {
     return mockEvents.find((e) => e.slug === slug) || null;
-  }
-}
-
-// ==========================================
-// NOTICES SERVICE
-// ==========================================
-export async function getNotices(): Promise<NoticeItem[]> {
-  if (!isSupabaseConfigured || !supabase) {
-    return mockNotices;
-  }
-
-  try {
-    const { data, error } = await supabase
-      .from('notices')
-      .select('*')
-      .order('created_at', { ascending: false });
-
-    if (error || !data || data.length === 0) {
-      return mockNotices;
-    }
-
-    return data.map((item: any) => ({
-      id: item.id,
-      slug: item.slug,
-      title: item.title,
-      priority: item.priority,
-      department: item.department,
-      date: item.date,
-      timeAgo: item.time_ago,
-      excerpt: item.excerpt,
-      content: Array.isArray(item.content) ? item.content : [item.content],
-      instructions: item.instructions || [],
-      issuedBy: item.issued_by,
-      attachments: item.attachments || [],
-    }));
-  } catch {
-    return mockNotices;
-  }
-}
-
-export async function getNoticeBySlug(slug: string): Promise<NoticeItem | null> {
-  if (!isSupabaseConfigured || !supabase) {
-    return mockNotices.find((n) => n.slug === slug) || null;
-  }
-
-  try {
-    const { data, error } = await supabase
-      .from('notices')
-      .select('*')
-      .eq('slug', slug)
-      .single();
-
-    if (error || !data) {
-      return mockNotices.find((n) => n.slug === slug) || null;
-    }
-
-    return {
-      id: data.id,
-      slug: data.slug,
-      title: data.title,
-      priority: data.priority,
-      department: data.department,
-      date: data.date,
-      timeAgo: data.time_ago,
-      excerpt: data.excerpt,
-      content: Array.isArray(data.content) ? data.content : [data.content],
-      instructions: data.instructions || [],
-      issuedBy: data.issued_by,
-      attachments: data.attachments || [],
-    };
-  } catch {
-    return mockNotices.find((n) => n.slug === slug) || null;
   }
 }
 

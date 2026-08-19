@@ -32,11 +32,6 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/notices" className="text-on-surface-variant hover:text-primary transition-colors">
-                  Notices
-                </Link>
-              </li>
-              <li>
                 <Link href="/announcements" className="text-on-surface-variant hover:text-primary transition-colors">
                   Announcements
                 </Link>

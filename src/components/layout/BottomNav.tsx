@@ -26,10 +26,10 @@ export const BottomNav: React.FC = () => {
       active: isTabActive('/events'),
     },
     {
-      label: 'Notices',
-      href: '/notices',
-      icon: 'notifications',
-      active: isTabActive('/notices'),
+      label: 'Announcements',
+      href: '/announcements',
+      icon: 'campaign',
+      active: isTabActive('/announcements'),
     },
     {
       label: 'Clubs',

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { mockClubs } from '@/data/clubs';
-import { Breadcrumb } from '@/components/ui/Breadcrumb';
+
 
 interface ClubDetailsPageProps {
   params: {
@@ -21,14 +21,7 @@ export default function ClubDetailsPage({ params }: ClubDetailsPageProps) {
   }
 
   return (
-    <div className="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12 flex flex-col gap-12 lg:gap-16">
-      {/* Breadcrumbs */}
-      <Breadcrumb
-        items={[
-          { label: 'Clubs', href: '/clubs' },
-          { label: club.name },
-        ]}
-      />
+    <div className="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-8 pt-4 md:pb-12 md:pt-6 flex flex-col gap-12 lg:gap-16">
 
       {/* Club Hero (Asymmetric) */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center bg-surface-container-lowest p-6 sm:p-10 rounded-2xl border border-outline-variant shadow-sm">

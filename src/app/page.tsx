@@ -3,10 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { mockEvents } from '@/data/events';
-import { mockNotices } from '@/data/notices';
 import { mockAnnouncements } from '@/data/announcements';
 import { EventCard } from '@/components/cards/EventCard';
-import { NoticeListItem } from '@/components/cards/NoticeListItem';
 import { AnnouncementItem } from '@/components/cards/AnnouncementItem';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/FadeIn';
 import { AuroraBackground } from '@/components/ui/AuroraBackground';
@@ -16,40 +14,14 @@ import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { motion } from 'framer-motion';
 
 export default function HomePage() {
-  const urgentNotice = mockNotices.find((n) => n.priority === 'very-important') || mockNotices[0];
   const upcomingEvents = mockEvents.slice(0, 3);
-  const latestAnnouncements = mockAnnouncements.slice(0, 3);
-  const officialNotices = mockNotices.slice(0, 4);
+  const latestAnnouncements = mockAnnouncements.slice(0, 5);
 
   return (
     <div className="w-full overflow-x-hidden relative bg-background selection:bg-primary/30">
       {/* Hero Section */}
       <AuroraBackground className="pt-20 md:pt-24">
-        {/* Important Notice Pill */}
-        {urgentNotice && (
-          <div className="w-full flex justify-center px-4 mb-4 z-20 relative">
-            <motion.div 
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: "auto", opacity: 1 }}
-              transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden whitespace-nowrap"
-            >
-              <Link href={`/notices/${urgentNotice.slug}`} className="block group pb-1 pr-1">
-                <div className="bg-white/50 backdrop-blur-xl border border-rose-500/30 p-1.5 pr-4 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-3 group-hover:bg-white/80 group-hover:shadow-[0_8px_30px_rgb(225,29,72,0.1)] group-hover:border-rose-500/50 transition-all duration-300">
-                  <span className="bg-gradient-to-r from-red-500 to-rose-500 text-white text-[10px] uppercase font-bold px-3 py-1.5 rounded-full tracking-widest shadow-sm flex-shrink-0">
-                    Urgent Notice
-                  </span>
-                  <span className="text-sm font-bold text-slate-800 group-hover:text-rose-600 transition-colors">
-                    {urgentNotice.title}
-                  </span>
-                  <span className="material-symbols-outlined text-[18px] text-slate-400 ml-2 group-hover:translate-x-1 transition-transform group-hover:text-rose-500 flex-shrink-0">
-                    arrow_forward
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
-          </div>
-        )}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,10 +86,10 @@ export default function HomePage() {
               </MagneticButton>
               <MagneticButton stiffness={100} mass={0.8}>
                 <Link
-                  href="/notices"
+                  href="/announcements"
                   className="bg-white/60 backdrop-blur-md border border-white/60 text-slate-900 text-sm sm:text-base font-semibold px-8 py-4 rounded-full hover:bg-white/90 transition-all shadow-glass flex items-center gap-2"
                 >
-                  Notice Board
+                  Announcements
                 </Link>
               </MagneticButton>
             </div>
@@ -202,52 +174,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Updates & Notices Split Section */}
+      {/* 4. Updates Section */}
       <section className="w-full relative z-10 py-24 md:py-32 bg-background border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Latest Updates */}
-          <FadeIn className="col-span-1 lg:col-span-7">
+          <FadeIn>
             <div className="flex justify-between items-end mb-8 border-b border-border pb-4">
-              <h2 className="text-3xl sm:text-4xl font-bold font-heading text-foreground tracking-tight">Latest Updates</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold font-heading text-foreground tracking-tight">Latest Announcements</h2>
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 max-w-4xl mx-auto">
               {latestAnnouncements.map((announcement) => (
                 <AnnouncementItem key={announcement.id} announcement={announcement} />
               ))}
             </div>
-            <Link
-              href="/announcements"
-              className="mt-8 block w-full py-4 bg-white border border-slate-200 text-slate-900 text-sm font-bold rounded-xl text-center hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm"
-            >
-              Browse All Updates
-            </Link>
-          </FadeIn>
-
-          {/* Desktop Official Notices Card */}
-          <FadeIn direction="left" delay={0.2} className="col-span-1 lg:col-span-5">
-            <div className="bg-card border border-border rounded-[2rem] p-8 shadow-elevated hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-500">
-              <div className="flex justify-between items-center mb-8 pb-4 border-b border-border">
-                <h2 className="text-2xl font-bold font-heading text-card-foreground">Official Notices</h2>
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-muted-foreground">
-                  <span className="material-symbols-outlined text-[24px]">campaign</span>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                {officialNotices.map((notice) => (
-                  <NoticeListItem key={notice.id} notice={notice} variant="compact" />
-                ))}
-              </div>
-
+            <div className="max-w-4xl mx-auto">
               <Link
-                href="/notices"
-                className="mt-8 block text-center bg-slate-950 text-white py-4 rounded-xl text-sm font-bold hover:bg-slate-800 transition-colors shadow-md"
+                href="/announcements"
+                className="mt-8 block w-full py-4 bg-white border border-slate-200 text-slate-900 text-sm font-bold rounded-xl text-center hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm"
               >
-                Access Notice Board
+                Browse All Announcements
               </Link>
             </div>
           </FadeIn>
+
         </div>
       </section>
 
