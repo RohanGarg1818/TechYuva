@@ -45,22 +45,7 @@ export default function AnnouncementsPage() {
         </div>
       </section>
 
-      {/* Featured Highlight Banner */}
-      {featured && selectedCategory === 'All' && (
-        <section className="bg-primary text-on-primary rounded-xl p-8 sm:p-10 shadow-sm relative overflow-hidden">
-          <div className="max-w-2xl space-y-3 relative z-10">
-            <span className="bg-white/20 text-white font-label-sm text-[11px] font-bold px-3 py-1 rounded uppercase tracking-wider inline-block backdrop-blur-sm">
-              Featured Story • {featured.date}
-            </span>
-            <h2 className="font-h2 text-h2 text-white leading-tight font-bold">
-              {featured.title}
-            </h2>
-            <p className="font-body-lg text-white/90 text-sm sm:text-base leading-relaxed">
-              {featured.description}
-            </p>
-          </div>
-        </section>
-      )}
+
 
       {/* Announcements Editorial List */}
       <section className="max-w-4xl w-full mx-auto">

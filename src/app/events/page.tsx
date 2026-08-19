@@ -14,6 +14,7 @@ export default function EventsPage() {
   const [activeTab, setActiveTab] = useState<'Upcoming' | 'Past'>('Upcoming');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedDepartment, setSelectedDepartment] = useState('All');
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const featuredEvent = mockEvents.find((e) => e.isFeatured) || mockEvents[0];
 
@@ -25,6 +26,8 @@ export default function EventsPage() {
 
   const categories = ['All', 'Technical', 'Cultural', 'Sports', 'Academic', 'Workshop'];
   const departments = ['All', 'Computer Science', 'Information Technology', 'Electronics & Communication', 'Student Affairs'];
+
+  const displayedEvents = filteredEvents.slice(0, visibleCount);
 
   return (
     <div className="w-full bg-background min-h-screen">
@@ -124,7 +127,7 @@ export default function EventsPage() {
                 {categories.map((c) => (
                   <button
                     key={c}
-                    onClick={() => setSelectedCategory(c)}
+                    onClick={() => { setSelectedCategory(c); setVisibleCount(6); }}
                     className={`flex-shrink-0 px-5 py-2.5 rounded-full text-[13px] font-bold transition-all ${
                       selectedCategory === c
                         ? 'bg-slate-900 text-white shadow-md'
@@ -146,7 +149,7 @@ export default function EventsPage() {
                 {departments.map((d) => (
                   <button
                     key={d}
-                    onClick={() => setSelectedDepartment(d)}
+                    onClick={() => { setSelectedDepartment(d); setVisibleCount(6); }}
                     className={`flex-shrink-0 px-5 py-2.5 rounded-full text-[13px] font-bold transition-all ${
                       selectedDepartment === d
                         ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
@@ -171,7 +174,7 @@ export default function EventsPage() {
               exit={{ opacity: 0 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 perspective-1000"
             >
-              {filteredEvents.map((event, index) => (
+              {displayedEvents.map((event, index) => (
                 <PerspectiveReveal key={event.id} index={index} className="h-full">
                   <EventCard event={event} />
                 </PerspectiveReveal>
@@ -191,7 +194,7 @@ export default function EventsPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-2">No events found</h3>
               <p className="text-slate-500 font-medium">Try adjusting your category or department filters.</p>
               <button 
-                onClick={() => { setSelectedCategory('All'); setSelectedDepartment('All'); }}
+                onClick={() => { setSelectedCategory('All'); setSelectedDepartment('All'); setVisibleCount(6); }}
                 className="mt-6 text-blue-600 font-bold hover:text-blue-700 transition-colors"
               >
                 Clear all filters
@@ -201,10 +204,13 @@ export default function EventsPage() {
         </AnimatePresence>
 
         {/* Magnetic Load More */}
-        {filteredEvents.length > 0 && (
+        {filteredEvents.length > visibleCount && (
           <div className="mt-16 flex justify-center">
             <MagneticButton stiffness={100} mass={0.8}>
-              <button className="bg-white border border-slate-200 text-slate-900 px-8 py-4 rounded-full text-sm font-bold shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex items-center gap-2">
+              <button 
+                onClick={() => setVisibleCount((prev) => prev + 6)}
+                className="bg-white border border-slate-200 text-slate-900 px-8 py-4 rounded-full text-sm font-bold shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex items-center gap-2"
+              >
                 <span className="material-symbols-outlined text-[18px]">refresh</span>
                 Load More Events
               </button>

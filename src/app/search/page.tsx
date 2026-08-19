@@ -4,7 +4,6 @@ import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { mockEvents } from '@/data/events';
-import { mockNotices } from '@/data/notices';
 import { mockAnnouncements } from '@/data/announcements';
 import { mockClubs } from '@/data/clubs';
 import { EventCard } from '@/components/cards/EventCard';
@@ -14,16 +13,12 @@ function SearchContent() {
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get('q') || '';
   const [query, setQuery] = useState(initialQuery);
-  const [activeFilter, setActiveFilter] = useState<'All' | 'Events' | 'Clubs' | 'Notices' | 'Announcements'>('All');
+  const [activeFilter, setActiveFilter] = useState<'All' | 'Events' | 'Clubs' | 'Announcements'>('All');
 
   const q = query.toLowerCase().trim();
 
   const matchingEvents = mockEvents.filter(
     (e) => !q || e.title.toLowerCase().includes(q) || e.description.toLowerCase().includes(q) || e.category.toLowerCase().includes(q)
-  );
-
-  const matchingNotices = mockNotices.filter(
-    (n) => !q || n.title.toLowerCase().includes(q) || n.excerpt.toLowerCase().includes(q) || n.department.toLowerCase().includes(q)
   );
 
   const matchingAnnouncements = mockAnnouncements.filter(
@@ -35,7 +30,7 @@ function SearchContent() {
   );
 
   const totalResults =
-    matchingEvents.length + matchingNotices.length + matchingAnnouncements.length + matchingClubs.length;
+    matchingEvents.length + matchingAnnouncements.length + matchingClubs.length;
 
   return (
     <div className="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20">
@@ -58,7 +53,7 @@ function SearchContent() {
         <div className="max-w-xl">
           <SearchBar
             variant="page"
-            placeholder="Search events, clubs, notices..."
+            placeholder="Search events, clubs, announcements..."
             initialValue={query}
             onSearch={(newQuery) => setQuery(newQuery)}
           />
@@ -96,16 +91,7 @@ function SearchContent() {
           >
             Clubs ({matchingClubs.length})
           </button>
-          <button
-            onClick={() => setActiveFilter('Notices')}
-            className={`px-4 py-2 rounded-full font-label-sm text-xs font-semibold whitespace-nowrap transition-all ${
-              activeFilter === 'Notices'
-                ? 'bg-primary text-on-primary shadow-sm'
-                : 'bg-surface-container border border-outline-variant text-on-surface'
-            }`}
-          >
-            Notices ({matchingNotices.length})
-          </button>
+
           <button
             onClick={() => setActiveFilter('Announcements')}
             className={`px-4 py-2 rounded-full font-label-sm text-xs font-semibold whitespace-nowrap transition-all ${
@@ -171,44 +157,6 @@ function SearchContent() {
 
           {/* Side Column (4-col) */}
           <div className="md:col-span-4 flex flex-col gap-10">
-            {/* Notices Section */}
-            {(activeFilter === 'All' || activeFilter === 'Notices') && matchingNotices.length > 0 && (
-              <section>
-                <div className="flex items-center gap-2 mb-4 border-b border-outline-variant pb-3">
-                  <span className="material-symbols-outlined text-error text-[24px]">priority_high</span>
-                  <h2 className="font-h2 text-h2 text-on-surface">Official Notices</h2>
-                </div>
-                <div className="space-y-4">
-                  {matchingNotices.map((notice) => (
-                    <Link
-                      key={notice.id}
-                      href={`/notices/${notice.slug}`}
-                      className="block p-5 bg-surface-container-lowest border border-outline-variant rounded-xl hover:shadow-subtle hover:border-primary transition-all group"
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span
-                          className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${
-                            notice.priority === 'very-important'
-                              ? 'bg-error text-on-error'
-                              : notice.priority === 'important'
-                              ? 'bg-tertiary-container text-on-tertiary-container'
-                              : 'bg-surface-container-high text-on-surface'
-                          }`}
-                        >
-                          {notice.priority.replace('-', ' ')}
-                        </span>
-                        <span className="text-xs text-on-surface-variant">{notice.date}</span>
-                      </div>
-                      <h3 className="font-h3 text-sm font-bold text-on-surface group-hover:text-primary transition-colors mb-1">
-                        {notice.title}
-                      </h3>
-                      <p className="text-xs text-on-surface-variant line-clamp-2">{notice.excerpt}</p>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            )}
-
             {/* Clubs Section */}
             {(activeFilter === 'All' || activeFilter === 'Clubs') && matchingClubs.length > 0 && (
               <section>
