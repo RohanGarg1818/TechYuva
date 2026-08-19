@@ -26,7 +26,6 @@ const config: Config = {
         
         "error-container": "#ffdad6",
         "on-error-container": "#93000a",
-        "secondary": "#5f5e5f",
         "surface-container-low": "#f3f4f5",
         "surface": "#f8f9fa",
         "on-primary-container": "#dad7ff",

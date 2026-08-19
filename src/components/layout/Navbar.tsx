@@ -7,7 +7,6 @@ import { SearchBar } from '@/components/ui/SearchBar';
 import { MobileMenu } from '@/components/layout/MobileMenu';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -118,9 +117,6 @@ export const Navbar: React.FC = () => {
                   Join Event
                 </Link>
               </motion.div>
-              <div className="pl-2 border-l border-slate-200/50">
-                <ThemeToggle />
-              </div>
             </div>
 
             <Link
