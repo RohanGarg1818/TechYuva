@@ -131,7 +131,6 @@ export interface ClubItem {
 export interface ResourceItem {
   id: string;
   title: string;
-  category: 'Academic' | 'Student Services' | 'Library' | 'Admissions' | 'Scholarships' | 'Forms' | 'Portals';
   description: string;
   icon: string;
   url: string;

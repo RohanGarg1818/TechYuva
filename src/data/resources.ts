@@ -3,74 +3,66 @@ import { ResourceItem } from '@/types';
 export const mockResources: ResourceItem[] = [
   {
     id: '1',
-    title: 'Student Portal',
-    category: 'Student Services',
-    description: 'Access academic transcripts, class timetables, attendance, and fee history.',
+    title: 'USICT Official',
+    description: 'Academic Programmes, curriculums, official notices and placements',
     icon: 'school',
-    url: '#',
+    url: 'https://ipu.ac.in/usict/Programmes.php',
     actionText: 'Access Portal'
   },
   {
     id: '2',
-    title: 'Academic Portal',
-    category: 'Academic',
-    description: 'Faculty resources, course syllabi, departmental tools, and research submissions.',
+    title: 'Curriculum',
+    description: 'Course syllabi and curriculum',
     icon: 'account_balance',
-    url: '#',
+    url: 'https://ipu.ac.in/btech2025.php',
     actionText: 'Access Portal'
   },
   {
     id: '3',
-    title: 'Examination Cell',
-    category: 'Academic',
-    description: 'End-term exam datesheets, previous years questions, re-evaluation forms, and results.',
+    title: 'Examination Result',
+    description: 'End-term exam results',
     icon: 'edit_document',
-    url: '#',
-    actionText: 'View Details'
+    url: 'https://examweb.ggsipu.ac.in/web/login.jsp',
+    actionText: 'View Result'
   },
   {
     id: '4',
-    title: 'Digital Library & Catalogue',
-    category: 'Library',
-    description: 'Search 50,000+ IEEE, ACM, Springer e-journals, reserve book loans, and study pods.',
+    title: 'GGSIPU Library',
+    description: 'Search 50,000+ journals and e-books',
     icon: 'local_library',
-    url: '#',
-    actionText: 'Search Catalog'
+    url: 'https://ipu.ac.in/usict/Programmes.php',
+    actionText: 'Access Portal'
   },
   {
     id: '5',
-    title: 'Official Forms & Downloads',
-    category: 'Forms',
-    description: 'Downloadable PDF forms for hostel allotment, no-dues clearance, bonafide certificates, and transcripts.',
-    icon: 'description',
-    url: '#',
-    actionText: 'View Forms'
+    title: 'Fee Services',
+    description: 'Annual Fee payment services',
+    icon: 'account_balance',
+    url: 'https://payments.billdesk.com/bdcollect/pay?p1=137&p2=14',
+    actionText: 'Pay Fee'
   },
   {
     id: '6',
-    title: 'Faculty & Staff Directory',
-    category: 'Student Services',
-    description: 'Searchable phone and email directory of professors, deans, and administrative heads.',
-    icon: 'contacts',
-    url: '#',
-    actionText: 'Find Contacts'
-  },
-  {
-    id: '7',
     title: 'Merit & Need Scholarships',
-    category: 'Scholarships',
-    description: 'Criteria, eligibility guidelines, and portal for institutional merit-cum-means awards.',
+    description: 'Criteria, eligibility and portal for scholarships',
     icon: 'workspace_premium',
-    url: '#',
+    url: 'https://ipu.ac.in/dsw_ews.php',
     actionText: 'Apply Now'
   },
   {
+    id: '7',
+    title: 'USICT Placements',
+    description: 'USICT year wise placement reports',
+    icon: 'business_center',
+    url: 'https://ipu.ac.in/usict/placement.php',
+    actionText: 'View Reports'
+  },
+  {
     id: '8',
-    title: 'Admissions & Counseling',
-    category: 'Admissions',
-    description: 'Information regarding IPU-CET, JEE Main cutoffs, seat matrices, and brochure.',
-    icon: 'how_to_reg',
-    url: '#',
+    title: 'Incubation Center GGSIPU',
+    description: 'Information about Atal Incubation Center, GGSIPU',
+    icon: 'lightbulb',
+    url: 'https://aic-ggsipu.org/',
     actionText: 'Learn More'
   }
 ];
