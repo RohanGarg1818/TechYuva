@@ -6,7 +6,7 @@ export const mockResources: ResourceItem[] = [
     title: 'USICT Official',
     description: 'Academic Programmes, curriculums, official notices and placements',
     icon: 'school',
-    url: 'https://ipu.ac.in/usict/Programmes.php',
+    url: 'https://ipu.ac.in/usict/',
     actionText: 'Access Portal'
   },
   {
@@ -30,7 +30,7 @@ export const mockResources: ResourceItem[] = [
     title: 'GGSIPU Library',
     description: 'Search 50,000+ journals and e-books',
     icon: 'local_library',
-    url: 'https://ipu.ac.in/usict/Programmes.php',
+    url: 'https://www.ipu.ac.in/library/index.php',
     actionText: 'Access Portal'
   },
   {
