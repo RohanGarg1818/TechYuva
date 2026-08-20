@@ -23,7 +23,7 @@ export const Navbar: React.FC = () => {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
 
-  useMotionValueEvent(scrollY, 'change', (latest) => {
+  useMotionValueEvent(scrollY, 'change', (latest: number) => {
     setScrolled(latest > 20);
   });
 

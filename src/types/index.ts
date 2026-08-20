@@ -86,12 +86,13 @@ export interface ClubItem {
   slug: string;
   name: string;
   category: 'Technical' | 'Cultural' | 'Sports' | 'Arts' | 'Social' | 'Entrepreneurship' | 'Academic';
+  affiliation?: 'USICT' | 'DSW';
   tagline: string;
   description: string;
   fullDescription?: string[];
   logo: string;
   bannerImage: string;
-  memberCount: string;
+  memberCount?: string;
   isFeatured?: boolean;
   featuredSize?: 'large' | 'small';
   updatedAt?: string;

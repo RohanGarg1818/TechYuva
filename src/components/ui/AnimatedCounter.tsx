@@ -30,7 +30,7 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [motionValue, isInView, value]);
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    springValue.on("change", (latest: number) => {
       if (ref.current) {
         ref.current.textContent = Intl.NumberFormat('en-US').format(Math.floor(latest)) + suffix;
       }

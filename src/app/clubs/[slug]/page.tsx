@@ -41,10 +41,6 @@ export default function ClubDetailsPage({ params }: ClubDetailsPageProps) {
               <span className="bg-primary-container text-on-primary-container px-3 py-1 rounded font-label-sm text-xs uppercase tracking-wider font-bold">
                 {club.category}
               </span>
-              <span className="flex items-center gap-1 text-on-surface-variant text-xs font-semibold">
-                <span className="material-symbols-outlined text-[16px]">group</span>
-                {club.memberCount}
-              </span>
             </div>
             <h1 className="font-display-hero text-3xl sm:text-4xl md:text-5xl text-on-surface font-bold">
               {club.name}
